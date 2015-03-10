@@ -25,7 +25,7 @@ function getTracks(){
 
 
 function getScenes(){
-	$.getJSON('http://gdata.youtube.com/feeds/api/playlists/PLPp3tIzLUEwZYvOFg9pa-I2K7sQ54egCw?v=2&alt=jsonc', function(data){
+	$.get('http://poolsideapi2.herokuapp.com/scenes?p=2', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
