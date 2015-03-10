@@ -155,7 +155,6 @@ function loadYt(sceneId){
 
 
 function skipScene(){
-	$('#videoHero').css({'opacity' : '0'});
 	playerBG.player.nextVideo();
 }
 
