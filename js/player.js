@@ -25,7 +25,7 @@ function getTracks(){
 
 
 function getScenes(){
-	$.getJSON('http://gdata.youtube.com/feeds/api/playlists/A6A0F817C1771FE5?v=2&alt=json&callback=?', function(data){
+	$.get('http://gdata.youtube.com/feeds/api/playlists/PLPp3tIzLUEwZYvOFg9pa-I2K7sQ54egCw?v=2&alt=jsonc', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
