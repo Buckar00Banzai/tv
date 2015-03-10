@@ -156,13 +156,7 @@ function loadYt(sceneId){
 
 function skipScene(){
 	$('#videoHero').css({'opacity' : '0'});
-	if (currentScenePos < (scenes.length - 1)){
-		currentScenePos ++
-		loadYt (scenes[currentScenePos].url)
-	} else {
-		currentScenePos = 0;
-		loadYt (scenes[currentScenePos].url)
-	}
+	playerBG.player.nextVideo();
 }
 
 
