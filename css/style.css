@@ -361,6 +361,9 @@ section {
     padding: 48px 0 48px;
   }
 }
+.first-section {
+  margin-top: 55px;
+}
 .fit-page {
   min-height: 600px;
   min-height: 100vh;
