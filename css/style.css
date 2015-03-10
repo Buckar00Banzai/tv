@@ -270,7 +270,7 @@ header {
   height: 55px;
   z-index: 9;
   text-align: center;
-  display: flex;
+  display: table-cell;
 }
 header a {
   text-decoration: underline;
@@ -283,14 +283,13 @@ header a:active {
   color: #ff3333;
 }
 .logo {
-  display: inline-block;
   height: 75px;
   width: 140px;
   background-image: url('../images/galore-tv.png') no-repeat 0 0;
   text-indent: 110%;
   overflow: visible;
   margin: 0 auto;
-  display: table-cell;
+  display: inline-block;
 }
 .logo span {
   display: none;
