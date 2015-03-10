@@ -10,7 +10,7 @@ var playerBG;
 
 $(document).ready(function(){
 	getTracks();
-	getScenes();
+	// getScenes();
 	initSC();
 })
 
@@ -24,13 +24,13 @@ function getTracks(){
 }
 
 
-function getScenes(){
-	$.get('http://poolsideapi2.herokuapp.com/scenes?p=2', function(data){
-		scenes = data;
-	}).done(function(){
-		shuffle(scenes);
-	});
-}
+// function getScenes(){
+// 	$.get('http://poolsideapi2.herokuapp.com/scenes?p=2', function(data){
+// 		scenes = data;
+// 	}).done(function(){
+// 		shuffle(scenes);
+// 	});
+// }
 
 function initSC(){
 	SC.initialize({
