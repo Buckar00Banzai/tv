@@ -94,7 +94,7 @@ select {
   font-style: normal;
   font-size: 13px;
   line-height: 24px;
-  font-family: 'Mercury SSm A', 'Mercury SSm B', georgia, serif;
+  font-family: 'Gotham', arial bold, sans-serif;
   letter-spacing: .5px;
   color: #8f8e88;
   -webkit-font-smoothing: antialiased;
@@ -265,12 +265,9 @@ header {
   left: 0;
   padding: 5px 0;
   width: 100%;
-  background: #000;
+  background: black;
   line-height: 24px;
   height: 55px;
-  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
-  -moz-box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
   z-index: 9;
   text-align: center;
   display: flex;
@@ -495,41 +492,6 @@ p.wide {
   }
 }
 /* **/
-/** press section */
-.press-section {
-  padding: 0;
-}
-.press {
-  text-align: center;
-  display: table;
-  margin: 0 auto;
-  padding: 40px 0px;
-}
-.press li {
-  padding: 0 1%;
-  float: left;
-  overflow: hidden;
-  display: table-cell;
-}
-.press a {
-  display: block;
-  text-align: center;
-}
-.press img {
-  max-width: 100%;
-  vertical-align: middle;
-}
-.press span {
-  position: absolute;
-  top: -240px;
-  left: -999em;
-}
-.counter {
-  color: white;
-  font-family: Arial, sans-serif;
-  font-weight: bold;
-  text-shadow: 2px 2px 5px #ff0066;
-}
 @media (max-width: 640px) {
   .press li {
     width: 33.33333333%;
@@ -545,40 +507,6 @@ p.wide {
   }
 }
 /* **/
-/** phone sections - all the colorful ones */
-.phone-section {
-  position: relative;
-  color: #fff;
-  padding: 0;
-}
-.phone-section,
-.phone-section .container {
-  min-height: 769px;
-}
-.phone-section .container {
-  position: relative;
-  padding-top: 96px;
-  padding-bottom: 96px;
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-  z-index: 2;
-}
-.phone-section p {
-  margin-bottom: 24px;
-  font-size: 24px;
-  line-height: 36px;
-  font-family: 'Gotham A', 'Gotham B', arial, sans-serif;
-}
-.phone-section .app-text {
-  z-index: 2;
-}
-.phone-section img {
-  width: 300px;
-  height: auto;
-  margin-bottom: 5px;
-}
 @media (max-width: 640px) {
   .phone-section p {
     margin-bottom: 0;
@@ -723,11 +651,11 @@ html.touch .app-screen {
 /* **/
 /** footer */
 footer {
-  padding: 10px 0;
+  padding: 0;
   font-size: 11px;
   line-height: 20px;
   color: #999;
-  background: #333;
+  background: black;
   position: fixed;
   bottom: 0px;
   width: 100%;

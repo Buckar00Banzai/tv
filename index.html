@@ -42,7 +42,7 @@
 <body class="">
 	
 	<!-- HEADER -->
-	<header class="clearfix">
+	<header class="blue-gradient clearfix">
 		<a class="logo" href="#"><span>GaloreTV</span></a>
 	</header>
 
@@ -50,14 +50,6 @@
 		<div class="flexslider top_slider">
 			<ul class="slides">
 				<li class="slide1 flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
-					<div class="container">
-						<div class="flex_caption1">
-							<div class='play pause' onclick="playBtn()"></div>
-							<div class='btn skip' onclick="skipTrack()">NEXT SONG</div>
-							<div class="btn" onclick="skipScene()">NEW SCENE</div>
-							<div class="btn" onclick="fullScreen()">FULL SCREEN</div>
-						</div>
-					</div>
 					<div id="videoHero"></div>
 				</li>
 			</ul>
@@ -65,15 +57,13 @@
 	</section>
 
 	<!-- FOOTER -->
-	<footer>
+	<footer class="blue-gradient">
 		<!-- COPYRIGHT -->
 		<div class="copyright">
 			<div class="container clearfix">
-				<div>
-					<p class="moreinfo left"><a href="mailto:hey@galoremag.com">Hey@GaloreMag.com</a></p>
-				</div>
+				<p class="moreinfo left"><a href="#" onclick="fullScreen()">FULL SCREEN</a></p>
 				
-				<p class="copy right">Copyright © 2014 Galore Media LLC<br></p>
+				<p class="copy right">NEXT <a href="#" onclick="skipTrack()">SONG</a> / <a href="#" onclick="skipScene()">SCENE</a></p>
 			</div>
 		</div><!-- //COPYRIGHT -->
 	</footer><!-- //FOOTER -->
