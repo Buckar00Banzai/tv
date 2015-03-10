@@ -29,6 +29,7 @@
 		
 		<!-- SoundCloud -->
 		<script src="http://connect.soundcloud.com/sdk.js"></script>
+
 		<script>
 		var tag = document.createElement('script');
 
@@ -52,7 +53,7 @@
 					<div class="container">
 						<div class="flex_caption1">
 							<div class='play pause' onclick="playBtn()"></div>
-							<img class='skip' onclick="skipTrack()"  src="/imgs/skip.png" alt="">
+							<div class='btn skip' onclick="skipTrack()">NEXT SONG</div>
 							<div class="btn" onclick="skipScene()">NEW SCENE</div>
 							<div class="btn" onclick="fullScreen()">FULL SCREEN</div>
 						</div>
@@ -60,7 +61,6 @@
 					<div id="videoHero"></div>
 				</li>
 			</ul>
-			<ol class="flex-control-nav flex-control-paging"><li><a class="">ONE</a></li><li><a class="flex-active">TWO</a></li></ol>
 		</div>
 	</section>
 
