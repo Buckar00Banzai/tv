@@ -12,7 +12,7 @@ $(document).ready(function(){
 	getTracks();
 	getScenes();
 	initSC();
-});
+})
 
 function getTracks(){
 	$.get('http://poolsideapi2.herokuapp.com/tracks?p=2', function(data){
@@ -200,8 +200,6 @@ function loader(){
     },1500);
 }
 
-
-
 function shuffle(array) {
   var currentIndex = array.length
     , temporaryValue
@@ -216,16 +214,6 @@ function shuffle(array) {
   }
   return array;
 }
-
-// function openModal(){
-//   $('.submitModal').show();
-// };
-
-// function closeModal(){
-//   $('.submitModal').hide();
-//   $('#url').val('');
-//   $('#twitter').val('');
-// }
 
 function fullScreen(){
     if(document.documentElement.requestFullscreen) {
