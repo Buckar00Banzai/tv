@@ -155,7 +155,7 @@ function loadYt(sceneId){
 
 
 function skipScene(){
-	playerBG.nextVideo();
+	player.nextVideo();
 }
 
 
