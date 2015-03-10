@@ -32,14 +32,11 @@ function getScenes(){
 	});
 }
 
-
-
 function initSC(){
 	SC.initialize({
 	    client_id: "79cdb380ce78f8151a711462d92a2f11"
 	});
 }
-
 
 /*----controls------*/
 function playBtn(){
