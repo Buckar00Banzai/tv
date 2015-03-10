@@ -26,196 +26,47 @@
 		<link rel="stylesheet" href="./css/style_responsive.css">
 		<link rel="stylesheet" href="./css/glyphicon.css">
 		<link rel="stylesheet" href="./css/font-awesome.min.css">
-		<style type="text/css"></style>
+		
+		<!-- SoundCloud -->
+		<script src="//connect.soundcloud.com/sdk.js"></script>
+		
 	</head>
 <body class="">
 	
 	<!-- HEADER -->
 	<header class="clearfix">
-		<div class="container">
-			<a class="logo" href="#">GaloreTV</a>
-		</div>
+		<a class="logo" href="#"><span>GaloreTV</span></a>
 	</header>
 
 	<section id="home" class="first-section">
 		<div class="flexslider top_slider">
 			<ul class="slides">
 				<li class="slide1 flex-active-slide" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 0; display: block; z-index: 1;">
+					<div class="container">
+						<div class="flex_caption1">
+							<div class='play pause' onclick="playBtn()"></div>
+							<img class='skip' onclick="skipTrack()"  src="/imgs/skip.png" alt="">
+							<div class="btn" onclick="skipScene()">NEW SCENE</div>
+							<div class="btn" onclick="fullScreen()">FULL SCREEN</div>
+						</div>
+					</div>
 					<div id="videoHero"></div>
 				</li>
-				<!--
-				<li class="slide2" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 2;">
-					<div class="container">
-						<div class="flex_caption1">
-							<h1 class="title1 captionDelay3 FromTop">Kitten is <i>it.</i></h1>
-							<p class="title2 captionDelay3 FromTop">Representing the sexy, fearless, creative <i>it girls</i> who make the socialsphere spin.</p>
-							<a class="btn btn-pink captionDelay4 FromBottom" href="#girl-list">Book Now</a>
-						</div>
-					</div>
-				</li> -->
-
-				<!-- <li class="slide3" style="width: 100%; float: left; margin-right: -100%; position: relative; opacity: 1; display: block; z-index: 3;">
-					<div class="container">
-						<div class="flex_caption1">
-							<h1 class="title1 captionDelay3 FromTop">Kitten + ONE Management = One.1K</h1>
-							<p class="title2 captionDelay3 FromTop">Launched in conjunction with ONE Management,  One.1K, Kitten merges the talent management and booking expertise of ONE Management, with Galore Media’s expertise in brand building and audience development.</p>
-							<a class="btn btn-pink captionDelay4 FromBottom" href="http://one.1management.com/">Meet the girls of One.1K</a>
-						</div>
-					</div>
-				</li> -->
-
 			</ul>
-			<ol class="flex-control-nav flex-control-paging"><li><a class="">1</a></li><li><a class="flex-active">2</a></li></ol>
-		</div>
-	</section>
-	<section class="press-section dark-section text-center">
-		<div class="container">
-			<div class="row pad-bot">
-				<div class="col-md-4">
-					<div class="pad-top"></div>
-					<h4 class="wide">Total Instagram Followers</h4>
-					<img src="http://counter5.statcounterfree.com/private/freecounterstat.php?c=122be984607a4df8b5847f05552811a3" border="0" title="website hits counter" alt="website hits counter">
-					<div class="pad-top-sm"></div>
-					<i class="fa fa-instagram"></i>
-				</div>
-				<div class="col-md-4">
-					<div class="pad-top"></div>
-					<h4 class="wide">Total Facebook Likes</h4>
-					<img src="http://counter5.statcounterfree.com/private/freecounterstat.php?c=52496d4825bafbff55b7e92bbddd6af6" border="0" title="web counter" alt="web counter">
-					<div class="pad-top-sm"></div>
-					<i class="fa fa-facebook"></i>
-				</div>
-				<div class="col-md-4">
-					<div class="pad-top"></div>
-					<h4 class="wide">Total Twitter @ Mentions</h4>
-					<img src="http://counter5.statcounterfree.com/private/freecounterstat.php?c=fbb7384dac968f864e20660fb20b1ea3" border="0" title="website counter widget" alt="website counter widget">
-					<div class="pad-top-sm"></div>
-					<i class="fa fa-at"></i>
-				</div>
-			</div>
+			<ol class="flex-control-nav flex-control-paging"><li><a class="">ONE</a></li><li><a class="flex-active">TWO</a></li></ol>
 		</div>
 	</section>
 
-	<!-- PHONE SHOTS -->
-
-	<section class="julia-section phone-section">
-		<div class="container">
-			<div class="app-graphic">
-				<b></b>
-			</div>
-			<div class="app-text">
-				<img src="./images/polaroids/polaroid-julia.png" style="-webkit-transform:rotate(3deg);">
-				<h2>Julia Kelly</h2>
-				<p class="span">Actress and model. Biggest bombshell on Vine.</p>
-				<p class="span">Represented by Kitten & One.1K</p>
-				<p>
-					<a href="http://instagram.com/missjuliakelly" target="blank"><i class="fa fa-instagram"></i></a>
-					<a href="https://www.facebook.com/RealJuliaKelly" target="blank"><i class="fa fa-facebook"></i></a>
-					<a href="https://twitter.com/missjuliakelly" target="blank"><i class="fa fa-twitter"></i></a>
-				</p>
-			</div>
-		</div>
-		<div class="app-screen"></div>
-	</section>
-
-	<section class="sjana-section phone-section">
-		<div class="container">
-			<div class="app-graphic">
-				<b></b>
-			</div>
-			<div class="app-text">
-				<img src="./images/polaroids/polaroid-sjana-white.png" style="-webkit-transform:rotate(-3deg);">
-				<h2>Sjana Elise Earp</h2>
-				<p class="span">Model, yoga superhero and world traveler.</p>
-				<p class="span" href="http://one.1management.com/portfolios.asp?model=ASHLEY%20MOORE">Represented by Vivien's Model Management<a/></p>
-				<p>
-					<a href="http://instagram.com/sjanaelise" target="blank"><i class="fa fa-instagram"></i></a>
-					<a href="https://www.facebook.com/sjana.eliseerap" target="blank"><i class="fa fa-facebook"></i></a>
-					<a href="https://twitter.com/sjanaearp" target="blank"><i class="fa fa-twitter"></i></a>
-				</p>
-			</div>
-		</div>
-		<div class="app-screen"></div>
-	</section>
-
-	<section class="sahara-section phone-section">
-		<div class="container">
-			<div class="app-graphic">
-				<b></b>
-			</div>
-			<div class="app-text">
-				<img src="./images/polaroids/polaroid-sahara-white.png" style="-webkit-transform:rotate(3deg);">
-				<h2>Sahara Ray</h2>
-				<p class="span">Model, swimwear designer and creator. Beach girl vibes with big city attitude</p>
-				<p class="span">Represented by Kitten & One.1K Management NY</p>
-				<p>
-					<a href="http://instagram.com/sahara_ray" target="blank"><i class="fa fa-instagram"></i></a>
-					<a href="https://twitter.com/sahara_ray" target="blank"><i class="fa fa-twitter"></i></a>
-					<a href="https://www.facebook.com/sahara.ray" target="blank"><i class="fa fa-facebook"></i></a>
-				</p>
-			</div>
-		</div>
-		<div class="app-screen"></div>
-	</section>
-
-	<section class="jenah-section phone-section">
-		<div class="container">
-			<div class="app-graphic">
-				<b></b>
-			</div>
-			<div class="app-text">
-				<img src="./images/polaroids/polaroid-jenah-white.png" style="-webkit-transform:rotate(-3deg);">
-				<h2>Jenah Yamamoto</h2>
-				<p class="span">Global gypsy, photographer, and coolest girl on the beach.</p>
-				<p class="span" href="http://one.1management.com/portfolios.asp?model=ASHLEY%20MOORE">Represented by Kitten<a/></p>
-				<p>
-					<a href="http://instagram.com/gypsyone" target="blank"><i class="fa fa-instagram"></i></a>
-					<a href="https://www.facebook.com/jenahyamamoto1" target="blank"><i class="fa fa-facebook"></i></a>
-					<a href="https://twitter.com/missgypsyone" target="blank"><i class="fa fa-twitter"></i></a>
-				</p>
-			</div>
-		</div>
-		<div class="app-screen"></div>
-	</section>
-
-	<section class="amber-section phone-section scroll">
-		<div class="container">
-			<div class="app-graphic">
-				<b></b>
-			</div>
-			<div class="app-text">
-				<img src="./images/polaroids/polaroid-amber-white.png" style="-webkit-transform:rotate(3deg);">
-				<h2>Amber Asaly</h2>
-				<p class="span">Bi-coastal Photographer and Artsy bitch</p>
-				<p class="span"><a href="http://instagram.com/amberasaly">Represented by Kitten</a></p>
-				<p>
-					<a href="http://instagram.com/amberasaly"><i class="fa fa-instagram"></i></a>
-					<a href="http://www.vimeo.com/110854414"><i class="fa fa-vimeo-square"></i></a>
-					<a href="http://amberasaly.tumblr.com/"><i class="fa fa-tumblr-square"></i></a>
-				</p>
-			</div>
-		</div>
-		<div class="app-screen"></div>
-	</section>
-	<!-- PRE FOOTER SECTION -->
-	<section class="prefooter-section">
-		<div class="container text-center">
-			<p class="wide">Contact us to join Kitten or learn more about how we can help you with casting, model management, photography, production, video, and other creative services.</p>
-			<div class="text-center">
-				<a href="mailto:booking@galoremag.com" class="btn reserve-btn">Book Now</a>
-			</div>
-		</div>
-	</section>
 	<!-- FOOTER -->
 	<footer>
 		<!-- COPYRIGHT -->
 		<div class="copyright">
 			<div class="container clearfix">
 				<div>
-					<p class="moreinfo left">For editorial, advertising, or partnership inquiries please contact <a href="mailto:hey@galoremag.com">hey@galoremag.com</a><br> View our <a href="/what-we-do">creative services and recent projects</a>.</p>
+					<p class="moreinfo left">For editorial, advertising, or partnership inquiries please contact <a href="mailto:hey@galoremag.com">hey@galoremag.com</a>.</p>
 				</div>
 				
-				<p class="copy right">Copyright © 2014 Galore Media LLC<br><span class="right"><a href="/dmca-policy">DMCA policy</a></span></p>
+				<p class="copy right">Copyright © 2014 Galore Media LLC<br></p>
 			</div>
 		</div><!-- //COPYRIGHT -->
 	</footer><!-- //FOOTER -->
@@ -245,6 +96,7 @@
 	<script src="./js/jquery.flexslider.js"></script>
 	<script src="./js/animate.js"></script>
 	<script src="./js/app.js"></script>
+	<script src="./js/player.js"></script>
 	<script>
       if (top != self) top.location.replace(self.location.href);
     </script>
@@ -288,9 +140,9 @@
 				'modestbranding': 1,
 				'origin': 'http://galoremag.com',
 				'showinfo': 0,
-				'playlist': 'QSHxsZLS1wE'
+				'listType': 'playlist',
+				'list': 'PLPp3tIzLUEwZYvOFg9pa-I2K7sQ54egCw'
 			},
-			videoId: 'QSHxsZLS1wE',
 			events: {
 			'onReady': onPlayerReady
 			// 'onStateChange': onPlayerStateChange
