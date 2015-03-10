@@ -12,39 +12,7 @@ $(document).ready(function(){
 	getTracks();
 	getScenes();
 	initSC();
-	newsletter()
-})
-
-
-// function newsletter(){
-// 	$('.newsletter').css({'left':$(window).width() / 2})
-// 	$('.newsletter').css({'top':$(window).height() / 2})
-
-// 	$('.newsletter .close').on('click', function(){
-// 		$('.newsletter').fadeOut();
-// 	})
-
-// 	$('.newsletter .btn').on('click', function(){
-// 		submitAddress();
-// 	});
-
-// 	function submitAddress(){
-// 		var email;
-// 		if ($('.newsletter input').val() == ""){
-// 			alert('please enter your email address');
-// 		} else {
-// 			email = $('.newsletter input').val();
-// 			$.post('http://poolsideapi2.herokuapp.com/email', {email : email}).success(function(){
-//             });
-// 			$('.newsletter .before').hide();
-// 			$('.newsletter .after').show();
-// 		}
-
-
-// 	}
-// }
-
-
+});
 
 function getTracks(){
 	$.get('http://poolsideapi2.herokuapp.com/tracks?p=2', function(data){
@@ -68,7 +36,7 @@ function getScenes(){
 
 function initSC(){
 	SC.initialize({
-	    client_id: "cef9224262e60e2c07053248f133feed"
+	    client_id: "79cdb380ce78f8151a711462d92a2f11"
 	});
 }
 
@@ -149,10 +117,10 @@ function pauseTrack(){
 
 /*----------------- YOUTUBE ------------*/
 function onYouTubeIframeAPIReady() {
-	playerBG = new YT.Player('bgytContainer', {
+	playerBG = new YT.Player('videoHero', {
 	  height: '135%',
       width: '135%',
-      playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque', 'volume' : 0,'origin': "www.poolside.fm" },
+      playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque', 'volume' : 0,'origin': "www.galoremag.com" },
 	  videoId: '',
 	  events: {
 	    'onReady': onPlayerReady,
@@ -177,7 +145,7 @@ function onPlayerStateChange(event) {
 	}
 
 	if (event.data == YT.PlayerState.PLAYING) {
-		$('#bgytContainer').css({'opacity' : '1'});
+		$('#videoHero').css({'opacity' : '1'});
 	}
 }
 
@@ -190,7 +158,7 @@ function loadYt(sceneId){
 
 
 function skipScene(){
-	$('#bgytContainer').css({'opacity' : '0'});
+	$('#videoHero').css({'opacity' : '0'});
 	if (currentScenePos < (scenes.length - 1)){
 		currentScenePos ++
 		loadYt (scenes[currentScenePos].url)
@@ -249,43 +217,15 @@ function shuffle(array) {
   return array;
 }
 
+// function openModal(){
+//   $('.submitModal').show();
+// };
 
-function submitTrack(){
-	if ($('#url').val() != "" && $('#title').val() != ""){
-
-        var trackTitle = $('#title').val();
-        var data = {};
-        var scUrl = $('#url').val();
-        data.title = trackTitle;
-        data.scUrl = scUrl;
-        data.twitter = $('#twitter').val();
-        $.post('http://poolsideapi2.herokuapp.com/submit', data).success(function(){
-          $('#title').val('');
-          $('#url').val('');
-          $('#twitter').val('');
-        });
-
-        var url = 'http://twitter.com/intent/tweet?url=http://poolside.fm&text=Just+submitted%20'+ trackTitle.toUpperCase() + '%20to+Poolside+Radio!+Tune+in:&hashtags=PoolsideFM,'
-        window.open(url);
-        $('.submitModal').hide();
-      } else {
-        $('.urlInput').css({'border':'1px solid red'});
-        $('.titleInput').css({'border':'1px solid red'});
-      }
-}
-
-function openModal(){
-  $('.submitModal').show();
-};
-
-function closeModal(){
-  $('.submitModal').hide();
-  $('#url').val('');
-  $('#twitter').val('');
-}
-
-
-
+// function closeModal(){
+//   $('.submitModal').hide();
+//   $('#url').val('');
+//   $('#twitter').val('');
+// }
 
 function fullScreen(){
     if(document.documentElement.requestFullscreen) {
@@ -298,4 +238,3 @@ function fullScreen(){
       document.documentElement.msRequestFullscreen();
     }
 }
-f
