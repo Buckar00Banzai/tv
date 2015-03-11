@@ -254,6 +254,7 @@ button:focus,
   margin-bottom: 24px;
 }
 i {
+  font-size: 12px;
   padding: 0 10px;
 }
 /* **/
