@@ -101,7 +101,6 @@ select {
 }
 body {
   background: #000;
-  overflow: hidden;
 }
 h1,
 h2,
@@ -352,7 +351,7 @@ header a:active {
 }
 .first-section {
   margin-top: 55px;
-  background: url(../images/lips.gif) no-repeat;
+  background: url("../images/lips.gif") no-repeat;
   background-size: cover;
   background-position: center center;
 }
@@ -406,8 +405,11 @@ p.wide {
   height: 100%;
   position: absolute;
   top: 0;
-  -webkit-transform: scale(1.3);
-  transform: scale(1.3);
+  /*-webkit-transform: scale(1.2);
+  transform: scale(1.2);*/
+  background: url("../images/lips.gif") no-repeat;
+  background-size: cover;
+  background-position: center center;
 }
 @media screen and (max-width: 640px) {
   #videoHero {
