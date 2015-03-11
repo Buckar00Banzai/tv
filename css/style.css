@@ -166,7 +166,7 @@ h6 {
   }
 }
 a {
-  color: #000000;
+  color: #d74591;
   text-decoration: none;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
@@ -272,6 +272,7 @@ header {
   z-index: 9;
   text-align: center;
   display: table-cell;
+  box-shadow: 0px 0px 25px rgba(255, 0, 50, 0.3);
 }
 header a {
   text-decoration: underline;
@@ -442,6 +443,7 @@ footer {
   bottom: 0px;
   width: 100%;
   z-index: 9;
+  box-shadow: 0px 0px 25px rgba(255, 0, 50, 0.3);
 }
 footer h4 {
   color: #fff;
