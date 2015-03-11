@@ -101,7 +101,6 @@ select {
 }
 body {
   background: #000;
-  overflow: hidden;
 }
 h1,
 h2,
@@ -355,7 +354,6 @@ header a:active {
   background: url(../images/lips.gif) no-repeat;
   background-size: cover;
   background-position: center center;
-  overflow: hidden;
 }
 .fit-page {
   min-height: 600px;
