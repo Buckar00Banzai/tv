@@ -62,13 +62,7 @@ function playBtn(){
 
 
 function loadTrackMeta(pos){
-	$('.copyright .container .title h3').empty();
-    $('.copyright .container .title h3').html("<a href='"+ tracks[currentTrackPos].scUrl+"' target='_blank'>" + tracks[pos].artist + "</br>" + tracks[pos].title) + "</a>";
-    $('.copyright .container .title h4').empty();
-    if (tracks[pos].twitter){
-        var twitterId = tracks[pos].twitter.replace('@','');
-        $('.copyright .container .title h4').html('<a href="http://www.twitter.com/' + twitterId + '" target="_blank">By @' + twitterId);
-    }
+    $('.copyright .container p.song').html("<a href='"+ tracks[currentTrackPos].scUrl+"' target='_blank'>" + tracks[pos].title + " <i class='fa fa-soundcloud'></i> By " + tracks[pos].artist) + "</a>";
 }
 
 function playTrack(pos){
