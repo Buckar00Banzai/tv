@@ -100,7 +100,8 @@ select {
   -webkit-font-smoothing: antialiased;
 }
 body {
-  background-color: #000;
+  background: #000;
+  overflow: hidden;
 }
 h1,
 h2,
@@ -254,7 +255,6 @@ button:focus,
   margin-bottom: 24px;
 }
 i {
-  font-size: 12px !important;
   padding: 0 10px;
 }
 /* **/
@@ -345,14 +345,6 @@ header a:active {
 }
 /* **/
 /** sections */
-section {
-  background: #fff;
-  padding: 96px 0;
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
 @media (max-width: 640px) {
   section {
     padding: 48px 0 48px;
@@ -360,6 +352,10 @@ section {
 }
 .first-section {
   margin-top: 55px;
+  background: url(../images/lips.gif) no-repeat;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
 }
 .fit-page {
   min-height: 600px;
@@ -417,78 +413,6 @@ p.wide {
 @media screen and (max-width: 640px) {
   #videoHero {
     display: none;
-  }
-}
-#home {
-  padding: 0;
-  min-height: 0;
-  /*background: #f0c5cf;*/
-}
-#home h1 {
-  font-size: 36px;
-  line-height: 45px;
-  letter-spacing: 8px;
-}
-#home p {
-  font-size: 18px;
-  line-height: 24px;
-}
-@media (max-width: 640px) {
-  #home .btn {
-    display: none;
-  }
-  #home h1 {
-    font-size: 20px;
-    line-height: 25px;
-    padding: 0px 10px 0px 10px;
-  }
-  #home p {
-    font-size: 14px;
-    line-height: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
-.top_slider .slide1 .flex_caption1 .title1,
-.top_slider .slide2 .flex_caption1 .title1 {
-  font-family: 'Gotham A', 'Gotham B', arial, sans-serif;
-}
-.top_slider .slide1 .flex_caption1,
-.top_slider .slide2 .flex_caption1 {
-  top: 20%;
-}
-#home,
-.flexslider.top_slider .slides li {
-  height: 580px;
-  background-position: center;
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  #home,
-  .flexslider.top_slider .slides li {
-    height: 580px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  #home,
-  .flexslider.top_slider .slides li {
-    height: 580px;
-  }
-}
-@media (max-width: 767px) {
-  #home,
-  .flexslider.top_slider .slides li {
-    height: 480px;
-  }
-}
-@media (max-width: 640px) {
-  #home,
-  .flexslider.top_slider .slides li {
-    height: 564px;
-    background-position: -680px 0px;
-  }
-  .top_slider .slide1 .flex_caption1,
-  .top_slider .slide2 .flex_caption1 {
-    width: 100%;
   }
 }
 /* **/
