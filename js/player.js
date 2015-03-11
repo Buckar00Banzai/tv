@@ -62,12 +62,12 @@ function playBtn(){
 
 
 function loadTrackMeta(pos){
-	$('.copyright .title h3').empty();
-    $('.copyright .title h3').html("<a href='"+ tracks[currentTrackPos].scUrl+"' target='_blank'>" + tracks[pos].artist + "</br>" + tracks[pos].title) + "</a>";
-    $('.copyright .title h4').empty();
+	$('.copyright .container .title h3').empty();
+    $('.copyright .container .title h3').html("<a href='"+ tracks[currentTrackPos].scUrl+"' target='_blank'>" + tracks[pos].artist + "</br>" + tracks[pos].title) + "</a>";
+    $('.copyright .container .title h4').empty();
     if (tracks[pos].twitter){
         var twitterId = tracks[pos].twitter.replace('@','');
-        $('.copyright .title h4').html('<a href="http://www.twitter.com/' + twitterId + '" target="_blank">By @' + twitterId);
+        $('.copyright .container .title h4').html('<a href="http://www.twitter.com/' + twitterId + '" target="_blank">By @' + twitterId);
     }
 }
 
