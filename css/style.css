@@ -358,10 +358,6 @@ header a:active {
   background-size: cover;
   background-position: center center;
 }
-.fit-page {
-  min-height: 600px;
-  min-height: 100vh;
-}
 @media (max-width: 640px) {
   #home {
     margin-top: 50px;
@@ -465,18 +461,6 @@ footer a {
 .copyright-info,
 .copyright-info a {
   color: #666;
-}
-@media (max-width: 640px) {
-  footer {
-    margin-bottom: 87px;
-  }
-  .moreinfo,
-  .copy {
-    width: 50%;
-  }
-  .app-screen {
-    visibility: hidden;
-  }
 }
 .moreinfo {
   color: #ccc;
