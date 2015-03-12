@@ -214,9 +214,10 @@ function fullScreen(){
 function changeDJ(id) {
 var e = document.getElementById(id);
 
-e.style.bottom = ((e.style.bottom!='-200px') ? '-200px' : '50px');
+event.preventDefault();
+e.style.bottom = ((e.style.bottom!='-150px') ? '-150px' : '50px');
 }
 
 $("a[onClick]").on("click", function(e) {
-  return false;
+  return e.preventDefault();
 });

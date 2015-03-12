@@ -157,10 +157,10 @@ em {
 }
 
 .transition {
-  transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -webkit-transition: all 0.3s ease-out;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);;
+  -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);;
+  -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);;
+  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);;
 }
 
 body,
@@ -244,10 +244,7 @@ h6 {
 a {
   color: #d74591;
   text-decoration: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  .transition;
 }
 a:hover {color: @pink; text-decoration: none;}
 a:focus {color: @pink; text-decoration: none;}
@@ -283,10 +280,7 @@ button,
   -moz-border-radius: 5px;
   border-radius: 5px;
   box-shadow: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  .transition;
   text-decoration: none !important;
 }
 .btn-default {
