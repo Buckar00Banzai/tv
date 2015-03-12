@@ -109,6 +109,10 @@ strong {
 em {
   font-style: italic;
 }
+.no-pad {
+  padding: 0;
+}
+
 .pad-top {
   padding-top: 24px;
 }
@@ -127,6 +131,7 @@ em {
 .pad-left {
   padding-left: 10px;
 }
+
 .bluegreen {
   color: #44a9ef;
 }
@@ -150,6 +155,14 @@ em {
   white-space: nowrap;
   overflow: hidden;
 }
+
+.transition {
+  transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+}
+
 body,
 input,
 textarea,
@@ -236,10 +249,9 @@ a {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-a:hover {
-  color: @pink;
-  text-decoration: none;
-}
+a:hover {color: @pink; text-decoration: none;}
+a:focus {color: @pink; text-decoration: none;}
+
 textarea {
   overflow: hidden;
   width: 100%;
@@ -350,10 +362,9 @@ header a:active {
 }
 
 .logo {
-  display: inline-block;
   height: 75px;
   width: 140px;
-  background: transparent url("../images/galore-tv.png") scroll no-repeat 0 0;
+  background: transparent url("../images/galore-fm.png") scroll no-repeat 0 0;
   background-size: 140px auto;
   text-indent: 110%;
   overflow: visible;
@@ -377,55 +388,11 @@ header a:active {
     width: 100%;
     background-position: center;
   }
-  header .order-now {
-    display: none;
-  }
-}
-
-#join-modal {
-  display: none;
-  z-index: 990;
-  text-align: center;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0 !important;
-  left: 0;
-}
-
-#modal-back {
-  z-index: 991;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background: rgba(0,0,0,0.9);
-}
-
-#join-box {
-  z-index: 992;
-  width: 400px;
-  padding: 40px;
-  background: white;
-  border-radius: 5px;
-  margin: 0 auto;
-  top: 25%;
-  position: relative;
-}
-
-.input-group {
-  margin: 0px 0px 10px 0px;
 }
 
 /* **/
 /** sections */
 
-@media (max-width: 640px) {
-  section {
-    padding: 48px 0 48px;
-  }
-}
 .first-section {
   margin-top: 55px;
   background: url("../images/lips.gif") no-repeat;
@@ -433,48 +400,6 @@ header a:active {
   background-position: center center;
 }
 
-@media (max-width: 640px) {
-  #home {
-    margin-top: 50px;
-  }
-}
-
-.dark-section {
-  background: #000;
-  border-bottom: 1px solid #eee;
-}
-
-.white-section {
-  background: #fff;
-  border-bottom: 1px solid #cdcbc0;
-}
-.wide {
-  -ms-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-h2.wide {
-  font-size: 24px;
-  font-weight: 500;
-}
-p.wide {
-  font-size: 16px;
-  line-height: 30px;
-  max-width: 760px;
-  margin: 0 auto 48px;
-}
-@media (max-width: 640px) {
-  h2.wide {
-    font-size: 20px;
-    line-height: 24px;
-  }
-  p.wide {
-    font-size: 14px;
-    line-height: 24px;
-  }
-}
-/* **/
 /** home (top carousel) */
 
 #videoHero {
@@ -492,25 +417,68 @@ p.wide {
   }
 }
 
-/* **/
-
-@media (max-width: 640px) {
-  .press li {
-    width: 33.33333333%;
-    padding: 0 1.66666667%;
-  }
-  .press .no-mobile {
-    display: none;
-  }
+.chooseDJ {
+  height: 200px;
+  background: rgba(0,0,0,0.66);
+  position: absolute;
+  z-index: 9;
+  bottom: -200px;
+  left: 0px;
+  text-align: center;
+  .transition;
 }
 
-@media (max-width: 460px) {
-  .col-xs-6 {
-    width: 100%;
-  }
+.chooseDJ ul {
+  list-style-type: none;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.chooseDJ ul a li.dj {
+  float: left;
+  display: block;
+  height: 100px;
+  margin-right: 10px;
+  display: table;
+  padding: 0;
+}
+
+.chooseDJ ul a li h4 {
+  display: table-cell;
+  vertical-align: middle;
+  background-color: rgba(0,0,0,0.75);
+  .transition;
+}
+
+.chooseDJ ul a li h4:hover {
+  background-color: rgba(0,0,0,0);
+  color: transparent;
+  .transition;
+}
+
+.chooseDJ ul a li.alie {
+  background: url(../images/alie-layus-dj.jpg) no-repeat;
+  background-size: cover;
+}
+
+.chooseDJ ul a li.ellie {
+  background: url(../images/ellie-twins-dj.jpg) no-repeat;
+  background-size: cover;
+}
+
+.chooseDJ ul a li.kate {
+  background: url(../images/kate-nash-dj.jpg) no-repeat;
+  background-size: cover;
+}
+
+.chooseDJ ul a li.melanie {
+  background: url(../images/melanie-ribbe-dj.jpg) no-repeat;
+  background-size: cover;
+  margin-right: 0;
 }
 
 /* **/
+
 /** footer */
 footer {
   padding: 0;

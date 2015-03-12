@@ -210,3 +210,13 @@ function fullScreen(){
       document.documentElement.msRequestFullscreen();
     }
 }
+
+function changeDJ(id) {
+var e = document.getElementById(id);
+
+e.style.bottom = ((e.style.bottom!='-200px') ? '-200px' : '50px');
+}
+
+$("a[onClick]").on("click", function(e) {
+  return false;
+});

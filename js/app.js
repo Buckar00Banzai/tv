@@ -6,17 +6,6 @@
     var $window = $(window),
         $html = $('html');
 
-    // Flex slider - home section
-    // --------------------------
-    //
-    $('.flexslider').flexslider({
-        animation: 'fade',
-        controlNav: true,
-        directionNav: false,
-        prevText: '',
-        nextText: ''
-    });
-
 })(jQuery);
 
 
