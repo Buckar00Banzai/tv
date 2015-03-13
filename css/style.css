@@ -307,8 +307,8 @@ a:focus {
 .btn {
   width: 100%;
   text-align: center;
-  color: #28b9ca;
-  background-color: #ffbebe;
+  color: pink;
+  background-color: #ff0066;
   margin: 10px auto;
   font-size: 11px;
   padding: 10px 0 7px 0;
@@ -316,7 +316,7 @@ a:focus {
   letter-spacing: 1px;
   position: relative;
   z-index: 2;
-  font-family: 'Kite One', sans-serif;
+  font-family: 'Gotham', sans-serif;
 }
 .btn:hover {
   opacity: 0.8;
