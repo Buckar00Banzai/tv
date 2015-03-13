@@ -62,7 +62,7 @@ function playBtn(){
 
 
 function loadTrackMeta(pos){
-    $('.copyright .container p.song').html("<a href='"+ tracks[currentTrackPos].scUrl+"' target='_blank'>" + tracks[pos].title + " <i class='fa fa-soundcloud'></i> By " + tracks[pos].artist) + "</a>";
+    $('p.song').html("<a href='"+ tracks[currentTrackPos].scUrl+"' target='_blank'>" + tracks[pos].title + " <br/> <i class='fa fa-soundcloud'></i> <br/> <span>" + tracks[pos].artist) + "</span></a>";
 }
 
 function playTrack(pos){
@@ -210,14 +210,3 @@ function fullScreen(){
       document.documentElement.msRequestFullscreen();
     }
 }
-
-function changeDJ(id) {
-var e = document.getElementById(id);
-
-event.preventDefault();
-e.style.bottom = ((e.style.bottom!='-150px') ? '-150px' : '50px');
-}
-
-$("a[onClick]").on("click", function(e) {
-  return e.preventDefault();
-});

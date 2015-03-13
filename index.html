@@ -39,36 +39,39 @@
 	</head>
 <body class="">
 	
-	<!-- HEADER -->
-	<header class="clearfix">
-		<a class="logo" href="#"><span>GaloreTV</span></a>
-	</header>
+	<div class="wrapper" >
+		<div class="sidebar">
+			<a class="logo" href="#"><span>GaloreTV</span></a>
+			<div><a class='play pause' onclick="playBtn()"></a></div>
+			<hr />
+			<p class="song"></p>
 
-	<section id="home" class="first-section">
-		<div id="videoHero"></div>
-		<div id="changeDJ" class="chooseDJ col-sm-12">
-			<h3 class="pad-top pink text-center">Choose DJ</h3>
-			<ul class="container-fluid">
-				<a href="#"><li class="dj alie col-sm-2 col-sm-offset-2"><h4 class="text-center">Alie Layus</h4></li></a>
-				<a href="#"><li class="dj ellie col-sm-2"><h4 class="text-center">Ellie Twins</h4></li></a>
-				<a href="#"><li class="dj kate col-sm-2"><h4 class="text-center">Kate Nash</h4></li></a>
-				<a href="#"><li class="dj melanie col-sm-2"><h4 class="text-center">Melanie Ribbe</h4></li></a>
-				<!-- <li class="dj"><p>Nervo</p></li> -->
-			</ul>
-		</div>
-	</section>
+		    <div class="loader">
+			    <div class="loaderMask"></div>
+			    <div class="loaderBg"></div>
+	    	</div>
 
-	<!-- FOOTER -->
-	<footer class="blue-gradient">
-		<!-- COPYRIGHT -->
-		<div class="copyright">
-			<div class="container clearfix">
-				<p class="moreinfo song left"></p>
-				
-				<p class="copy right"><a class='play pause' onclick="playBtn()"></a> • <a href="#" onclick="changeDJ('changeDJ')">DJ</a>&nbsp; • <a href="#" onclick="skipTrack()"><i class="fa fa-headphones"></i></a> • <a href="#" onclick="skipScene()"><i class="fa fa-camera-retro"></i></a> • <a href="#" onclick="fullScreen()"><i class="fa fa-expand"></i></a></p>
-			</div>
-		</div><!-- //COPYRIGHT -->
-	</footer><!-- //FOOTER -->
+			<div class='btn' onclick="skipTrack()">NEW SONG</div>
+			<div class="btn" onclick="skipScene()">NEW SCENE</div>
+			<div class="btn" onclick="fullScreen()">FULL SCREEN</div>
+	</div>
+
+	<div id="videoHero">
+	</div>
+
+	<div class="sorry">
+	  HEY!</br></br>
+
+	 Our mobile & iPad version isn't quite ready yet - please join us via computer for now.</br></br>
+
+	 Follow our Facebook page for updates: <a href="http://facebook.com/poolside.fm">FB.com/poolside.fm</a>
+	</div>
+
+    <script>
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      $('.sorry').show();
+    }
+    </script>
 
 	<!-- SCRIPTS -->
 	<script src="./js/jquery.js"></script>
@@ -95,7 +98,7 @@
 	</script>
 
     <script>
-    // document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
     </script>
 
 </body>
