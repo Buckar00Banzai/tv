@@ -281,7 +281,7 @@ a:focus {
   text-decoration: none;
 }
 .song span a:hover {
-  color: #ffbebe;
+  color: #ff66a3;
 }
 .sidebar .song {
   margin: 20px auto;
@@ -319,7 +319,7 @@ a:focus {
   font-family: 'Gotham', sans-serif;
 }
 .btn:hover {
-  opacity: 0.8;
+  background-color: #ff66a3;
 }
 .videoContainer {
   width: 80%;
