@@ -191,8 +191,11 @@ a:focus {
   position: relative;
   z-index: 10000;
   top: 0px;
-  transition: all 0.2s;
-  -webkit-transition: all 0.2s;
+  text-align: center;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .sidebar .logo {
   height: 75px;
@@ -201,7 +204,7 @@ a:focus {
   background-size: 140px auto;
   text-indent: 110%;
   overflow: visible;
-  margin: 0 auto;
+  margin: 20px auto;
   display: inline-block;
 }
 .sidebar .logo span {
