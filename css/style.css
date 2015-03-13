@@ -6,136 +6,11 @@
     More info at: http://lesselements.com
   ---------------------------------------------------*/
 /*-- VARIABLES & MIXINS --*/
-/** core styles */
-.default-font {
-  color: #8f8e88;
-  text-decoration: none;
-  text-transform: none;
-}
-.xsmall {
-  font-size: 11px;
-}
-.small {
-  font-size: 12px;
-}
-.large {
-  font-size: 18px;
-}
-@media (max-width: 640px) {
-  .large {
-    font-size: 14px;
-  }
-}
-.left {
-  float: left;
-}
-.right {
-  float: right;
-}
-.text-right {
-  text-align: right;
-}
-.text-center {
-  text-align: center;
-}
-.strong,
-strong {
-  font-weight: bold;
-}
-.em,
-em {
-  font-style: italic;
-}
-.no-pad {
-  padding: 0;
-}
-.pad-top {
-  padding-top: 24px;
-}
-.pad-top-sm {
-  padding-top: 10px;
-}
-.pad-bot {
-  padding-bottom: 24px;
-}
-.pad-bot-sm {
-  padding-bottom: 10px;
-}
-.pad-right {
-  padding-right: 10px;
-}
-.pad-left {
-  padding-left: 10px;
-}
-.bluegreen {
-  color: #44a9ef;
-}
-.greenblue {
-  color: #45e7b4;
-}
-.mustard {
-  color: #f8d88b;
-}
-.magenta {
-  color: #cf8bd2;
-}
-.coral {
-  color: #ff7f7f;
-}
-.pink {
-  color: #ff0066;
-}
-.hide-text {
-  text-indent: 110%;
-  white-space: nowrap;
-  overflow: hidden;
-}
 .transition {
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-body,
-input,
-textarea,
-select {
-  font-style: normal;
-  font-size: 13px;
-  line-height: 24px;
-  font-family: 'Gotham', arial bold, sans-serif;
-  letter-spacing: .5px;
-  color: #8f8e88;
-  -webkit-font-smoothing: antialiased;
-}
-a {
-  color: #d74591;
-  text-decoration: none;
-  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-a:hover {
-  color: #ff0066;
-  text-decoration: none;
-}
-a:focus {
-  color: #ff0066;
-  text-decoration: none;
-}
-.logo {
-  height: 75px;
-  width: 140px;
-  background: transparent url("../images/galore-tv.png") scroll no-repeat 0 0;
-  background-size: 140px auto;
-  text-indent: 110%;
-  overflow: visible;
-  margin: 0 auto;
-  display: inline-block;
-}
-.logo span {
-  display: none;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -268,24 +143,34 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-@font-face {
-  font-family: 'SF Movie Poster Bold';
-  src: url('../fonts/SFMoviePosterBold.ttf') format('truetype');
-  
-  /* Safari, Android, iOS */
-}
-@font-face {
-  font-family: 'SF Movie Poster Bold Oblique';
-  src: url('../fonts/SFMoviePosterBoldOblique.ttf') format('truetype');
-  
-  /* Safari, Android, iOS */
-}
-body {
-  background-color: #303030;
-  font-family: 'Open Sans', sans-serif;
-  color: #2c3e50;
+body,
+input,
+textarea,
+select {
+  font-style: normal;
+  font-size: 13px;
+  line-height: 24px;
+  font-family: 'Gotham', arial bold, sans-serif;
+  letter-spacing: .5px;
+  color: #8f8e88;
   max-height: 100%;
-  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+a {
+  color: #d74591;
+  text-decoration: none;
+  transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+a:hover {
+  color: #ff0066;
+  text-decoration: none;
+}
+a:focus {
+  color: #ff0066;
+  text-decoration: none;
 }
 .wrapper {
   width: 100%;
@@ -308,6 +193,19 @@ body {
   top: 0px;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
+}
+.sidebar .logo {
+  height: 75px;
+  width: 140px;
+  background: transparent url("../images/galore-tv.png") scroll no-repeat 0 0;
+  background-size: 140px auto;
+  text-indent: 110%;
+  overflow: visible;
+  margin: 0 auto;
+  display: inline-block;
+}
+.sidebar .logo span {
+  display: none;
 }
 .firefox .sidebar {
   width: 220px;

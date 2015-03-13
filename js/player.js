@@ -111,7 +111,7 @@ function onYouTubeIframeAPIReady() {
 	playerBG = new YT.Player('videoHero', {
 	  height: '135%',
       width: '135%',
-      playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque', 'volume' : 0,'origin': "www.galoremag.com" },
+      playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque', 'volume' : 0 },
 	  videoId: '',
 	  events: {
 	    'onReady': onPlayerReady,
