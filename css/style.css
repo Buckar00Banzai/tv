@@ -329,6 +329,7 @@ header a:active {
   margin-top: 55px;
   background: url("../images/lips.gif") no-repeat;
   background-size: cover;
+  height: 100%;
   background-position: center center;
 }
 /** home (top carousel) */
@@ -339,6 +340,40 @@ header a:active {
   top: 0;
   /*-webkit-transform: scale(1.2);
   transform: scale(1.2);*/
+}
+.loaderMask {
+  display: block;
+  width: 78px;
+  height: 75px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  background: url('../images/lips.gif');
+  z-index: 100;
+  border-radius: 9px;
+}
+.loaderBg {
+  display: block;
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  background-color: #fff;
+  z-index: 50;
+  left: 4px;
+  top: 100px;
+}
+.loader {
+  top: -15px;
+  left: 3px;
+  width: 78px;
+  height: 74px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  display: none!important;
+  margin: 34px auto 11px;
 }
 @media screen and (max-width: 640px) {
   #videoHero {
