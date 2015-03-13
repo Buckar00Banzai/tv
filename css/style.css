@@ -192,22 +192,23 @@ a:focus {
   z-index: 10000;
   top: 0px;
   text-align: center;
-  background: #a5c600;
+  background: #32ffff;
   /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #a5c600 0%, #ffee02 100%);
+  background: -moz-linear-gradient(-45deg, #afb4f1 0%, #32ffff 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #a5c600), color-stop(100%, #ffee02));
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #afb4f1), color-stop(100%, #32ffff));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #a5c600 0%, #ffee02 100%);
+  background: -webkit-linear-gradient(-45deg, #afb4f1 0%, #32ffff 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #a5c600 0%, #ffee02 100%);
+  background: -o-linear-gradient(-45deg, #afb4f1 0%, #32ffff 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #a5c600 0%, #ffee02 100%);
+  background: -ms-linear-gradient(-45deg, #afb4f1 0%, #32ffff 100%);
   /* IE10+ */
-  background: linear-gradient(135deg, #a5c600 0%, #ffee02 100%);
+  background: linear-gradient(135deg, #afb4f1 0%, #32ffff 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#a5c600', endColorstr='#ffee02', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@startColor', endColorstr='@endColor', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@startColor', endColorstr='@endColor', GradientType=1);
   transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   -o-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   -moz-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
