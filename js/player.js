@@ -10,7 +10,7 @@ var playerBG;
 
 $(document).ready(function(){
 	getTracks();
-	// getScenes();
+	getScenes();
 	initSC();
 })
 
