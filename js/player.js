@@ -68,6 +68,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
+	playerBG.setShuffle(shufflePlaylist:true);
 	event.target.playVideo();
 }
 
