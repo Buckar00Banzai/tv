@@ -82,6 +82,7 @@ function onPlayerStateChange(event) {
 }
 
 function skipScene(){
+	$('#videoHero').css({'opacity' : '0'});
 	playerBG.nextVideo();
 }
 
