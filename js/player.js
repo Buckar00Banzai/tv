@@ -82,10 +82,18 @@ function onPlayerStateChange(event) {
 	}
 }
 
+var getRandom = function(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var playRandomTrack = function() {
+  num = getRandom(0, 99); 
+};
+
 function skipScene(){
 	playerBG.stopVideo();
 	$('#videoHero').css({'opacity' : '0'});
-	playerBG.playVideoAt(20);
+	playerBG.playVideoAt(num);
 }
 
 /*--------------------------------*/
