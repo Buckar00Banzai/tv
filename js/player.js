@@ -89,15 +89,11 @@ function skipScene(){
 }
 
 function muteToggle() {
-	$('#mute').click(function() {
-		if (playerBG.isMuted(true)) {
-			$('#mute').removeClass('yellowBack');
-			playerBG.unMute();
-		} else {
-			$('#mute').addClass('yellowBack');
-			playerBG.mute();
-		}
-	});
+	if (playerBG.isMuted(true)) {
+		$('#mute').removeClass('yellowBack') && playerBG.unMute();
+	} else {
+		$('#mute').addClass('yellowBack') && playerBG.mute();
+	}
 }
 
 /*--------------------------------*/
