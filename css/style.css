@@ -13,7 +13,7 @@
   -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .yellowBack {
-  background: #f2ff02;
+  background-color: #f2ff02 !important;
 }
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126

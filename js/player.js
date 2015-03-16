@@ -47,8 +47,8 @@ function initSC(){
 /*----------------- YOUTUBE ------------*/
 function onYouTubeIframeAPIReady() {
 	playerBG = new YT.Player('videoHero', {
-	  height: '135%',
-      width: '135%',
+	  height: '100%',
+      width: '100%',
       playerVars: {
       	'autoplay': 1,
       	'controls': 1,
