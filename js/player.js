@@ -53,6 +53,7 @@ function onYouTubeIframeAPIReady() {
       	'autoplay': 1,
       	'controls': 1,
       	'autohide':1,
+      	'enablejsapi': 1,
       	'wmode':'opaque',
       	'origin': 'http://galoremag.com',
       	'loop': 1,
@@ -90,8 +91,9 @@ function getRandomId() {
 }
 
 function skipScene(){
+	playerBG.stopVideo();
 	$('#videoHero').css({'opacity' : '0'});
-	playerBG.nextVideo();
+	playerBG.playVideoAt(random_id);
 }
 
 /*--------------------------------*/
