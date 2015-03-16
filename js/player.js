@@ -82,18 +82,18 @@ function onPlayerStateChange(event) {
 	}
 }
 
+var getRandom = function(min, max) {
+  return Math.random() * (max - min) + min;
+};
+
+var playRandomTrack = function() {
+  num = getRandom(0, 99);
+  playerBG.playVideoAt(num);  
+};
+
 function skipScene(){
-	function getRandomId() {
-	    var random_id = 0
-	    while(played_idx.indexOf(random_id) != -1) {
-	      random_id = Math.floor(Math.random * playlist.length)
-	    }
-	    return random_id;
-	}
-	
 	playerBG.stopVideo();
 	$('#videoHero').css({'opacity' : '0'});
-	playerBG.playVideoAt(random_id);
 }
 
 /*--------------------------------*/
