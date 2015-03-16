@@ -90,8 +90,10 @@ function skipScene(){
 
 function muteToggle() {
 	if (playerBG.isMuted(true)) {
+		$('#mute').css('background','inherit');
 		playerBG.unMute();
 	} else {
+		$('#mute').css('background','yellow');
 		playerBG.mute();
 	}
 }
