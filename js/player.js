@@ -90,6 +90,8 @@ function skipScene(){
 
 function muteToggle() {
 	if (playerBG.isMuted(true)) {
+		$('#mute').css('background','#FF0066');
+		$('#mute:hover').css('background','#FF66A3');
 		playerBG.unMute();
 	} else {
 		$('#mute').css('background','yellow');
