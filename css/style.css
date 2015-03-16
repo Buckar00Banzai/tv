@@ -308,7 +308,7 @@ a:focus {
 .btn {
   width: 100%;
   text-align: center;
-  color: pink;
+  color: white;
   background-color: #ff0066;
   margin: 10px auto;
   font-size: 11px;
@@ -326,7 +326,8 @@ a:focus {
   background-color: #ff66a3;
 }
 .yellowBack {
-  background-color: yellow !important;
+  color: pink;
+  background-color: #f2ff02;
 }
 .videoContainer {
   width: 80%;
