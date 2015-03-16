@@ -1,5 +1,4 @@
-var scenes;
-var currentTrackPos = 0;
+
 var currentScenePos = 0;
 var playing = true;
 var playerBG;
@@ -24,23 +23,23 @@ function initSC(){
 }
 
 /*----controls------*/
-function playBtn(){
-	if (playing == false && trackLoaded == false){
-		playTrack(currentTrackPos);
-		$('.play').addClass('pause');
-		playing = true;
-	} else if (playing == false && trackLoaded == true) {
-		soundManager.play(currentTrackManagerId);
-		playerBG.playVideo();
-		$('.play').addClass('pause');
-		playing = true;
-	} else if (playing == true){
-		pauseTrack();
-		playerBG.pauseVideo();
-		$('.play').removeClass('pause');
-		playing = false;
-	}
-}
+// function playBtn(){
+// 	if (playing == false && trackLoaded == false){
+// 		playTrack(currentTrackPos);
+// 		$('.play').addClass('pause');
+// 		playing = true;
+// 	} else if (playing == false && trackLoaded == true) {
+// 		soundManager.play(currentTrackManagerId);
+// 		playerBG.playVideo();
+// 		$('.play').addClass('pause');
+// 		playing = true;
+// 	} else if (playing == true){
+// 		pauseTrack();
+// 		playerBG.pauseVideo();
+// 		$('.play').removeClass('pause');
+// 		playing = false;
+// 	}
+// }
 
 /*----------------*/
 
@@ -69,14 +68,12 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-		loadYt(scenes[0].url)
-		 if (playerBG.getDuration() < 1){
+		if (playerBG.getDuration() < 1){
 	        skipScene();
 	   	} else {
         	event.target.playVideo();
         }
 }
-
 
 function onPlayerStateChange(event) {
 	if (event.data == 0){
@@ -88,45 +85,11 @@ function onPlayerStateChange(event) {
 	}
 }
 
-
-
-function loadYt(sceneId){
-   playerBG.loadVideoById(sceneId);
-}
-
-
-
 function skipScene(){
-	$('#videoHero').css({'opacity' : '0'});
-	if (currentScenePos < (scenes.length - 1)){
-		currentScenePos ++
-		loadYt (scenes[currentScenePos].url)
-	} else {
-		currentScenePos = 0;
-		loadYt (scenes[currentScenePos].url)
-	}
+	playerBG.nextVideo();
 }
-
-
-
 
 /*--------------------------------*/
-
-function skipTrack(){
-
-	if (playing == true){
-		pauseTrack();
-	}
-
-
-	if (currentTrackPos < (tracks.length -1)){
-		currentTrackPos++;
-		playTrack(currentTrackPos);
-	} else {
-		currentTrackPos = 0;
-		playTrack(currentTrackPos);
-	}
-}
 
 function loader(){
 	$('.title').hide();
@@ -137,21 +100,6 @@ function loader(){
 	    $('.title').show();
 	    $('.loaderBg').animate({'top':'100px'}, 100);
     },1500);
-}
-
-function shuffle(array) {
-  var currentIndex = array.length
-    , temporaryValue
-    , randomIndex;
-
-  while (0 !== currentIndex) {
-    randomIndex = Math.floor(Math.random() * currentIndex);
-    currentIndex -= 1;
-    temporaryValue = array[currentIndex];
-    array[currentIndex] = array[randomIndex];
-    array[randomIndex] = temporaryValue;
-  }
-  return array;
 }
 
 function fullScreen(){
