@@ -91,7 +91,7 @@ function skipScene(){
 
 	playerBG.stopVideo();
 	$('#videoHero').css({'opacity' : '0'});
-	playerBG.playVideoAt(playRandomTrack);
+	playerBG.playVideoAt(num);
 }
 
 /*--------------------------------*/
