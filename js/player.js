@@ -47,28 +47,29 @@ function initSC(){
 /*----------------- YOUTUBE ------------*/
 function onYouTubeIframeAPIReady() {
 	playerBG = new YT.Player('videoHero', {
-	  height: '135%',
-      width: '135%',
-      playerVars: {
-      	'autoplay': 1,
-      	'controls': 1,
-      	'autohide':1,
-      	'enablejsapi': 1,
-      	'wmode':'opaque',
-      	'origin': 'http://galoremag.com',
-      	'loop': 1,
-      	'listType': 'playlist',
-		'list': 'PLUfG5WpANuJpIm62ldjjpunTRb3hABEA4'
-      },
-	  videoId: '',
-	  events: {
-	    'onReady': onPlayerReady,
-	    'onStateChange': onPlayerStateChange
-	  }
+		height: '135%',
+		width: '135%',
+		playerVars: {
+			'autoplay': 1,
+			'controls': 1,
+			'autohide':1,
+			'enablejsapi': 1,
+			'wmode':'opaque',
+			'origin': 'http://galoremag.com',
+			'loop': 1,
+			'listType': 'playlist',
+			'list': 'PLUfG5WpANuJpIm62ldjjpunTRb3hABEA4'
+		},
+		videoId: '',
+		events: {
+			'onReady': onPlayerReady,
+			'onStateChange': onPlayerStateChange
+		}
 	});
 }
 
 function onPlayerReady(event) {
+	event.target.unMute();
 	event.target.playVideo();
 }
 
