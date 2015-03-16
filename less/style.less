@@ -76,12 +76,6 @@
   -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);;
 }
 
-.yellowBack {
-  background-color: @yellow !important;
-}
-
-
-
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -309,6 +303,10 @@ a:focus {color: @pink; text-decoration: none;}
   background-color: lighten(@pink, 20%);
 }
 
+.yellowBack {
+  background-color: @yellow !important;
+}
+
 .videoContainer{
   width: 80%;
   overflow: hidden;
@@ -444,11 +442,11 @@ a:focus {color: @pink; text-decoration: none;}
   top: -10%;
   opacity: 0;
 }
-/*
-  .wrapper:after{
-    content: "";
-    display: block;
-width: 135%;
+
+.wrapper:after{
+  content: "";
+  display: block;
+  width: 135%;
   height: 135%;
   position: fixed;
   left: -10%;
@@ -470,8 +468,7 @@ width: 135%;
   );
   -moz-background-size: 100% 2px;
   z-index: 1;
-  }*/
-
+}
 
 .staticCover {
   position: fixed;
