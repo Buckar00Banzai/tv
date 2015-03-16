@@ -6,6 +6,7 @@ var playerBG;
 
 $(document).ready(function(){
 	initSC();
+	unMute();
 })
 
 // function getScenes(){
@@ -69,7 +70,6 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	event.target.unMute();
 	event.target.playVideo();
 }
 
