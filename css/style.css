@@ -447,8 +447,8 @@ a:focus {
 .wrapper:after {
   content: "";
   display: block;
-  width: 135%;
-  height: 135%;
+  width: 125%;
+  height: 125%;
   position: fixed;
   left: -10%;
   top: -10%;
