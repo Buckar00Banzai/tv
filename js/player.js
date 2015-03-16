@@ -89,11 +89,11 @@ function skipScene(){
 }
 
 function muteToggle() {
-	if (playerBG.isMuted(true) {
+	if (playerBG.isMuted(true)) {
 		playerBG.unMute();
 	} else {
 		playerBG.mute();
-	});
+	}
 }
 
 /*--------------------------------*/
