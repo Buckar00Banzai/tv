@@ -82,9 +82,17 @@ function onPlayerStateChange(event) {
 	}
 }
 
+function getRandomId() {
+    var random_id = 0
+    while(played_idx.indexOf(random_id) != -1) {
+      random_id = Math.floor(Math.random * playlist.length)
+    }
+    return random_id
+}
+
 function skipScene(){
 	$('#videoHero').css({'opacity' : '0'});
-	playerBG.nextVideo();
+	playerBG.playVideoAt(random_id);
 }
 
 /*--------------------------------*/
