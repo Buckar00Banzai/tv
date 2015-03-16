@@ -6,7 +6,6 @@ var playerBG;
 
 $(document).ready(function(){
 	initSC();
-	unMute();
 })
 
 // function getScenes(){
