@@ -68,7 +68,6 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	playerBG.setShuffle(shufflePlaylist:true);
 	event.target.playVideo();
 }
 
@@ -91,6 +90,7 @@ function getRandomId() {
 }
 
 function skipScene(){
+	event.data = 0;
 	$('#videoHero').css({'opacity' : '0'});
 	playerBG.playVideoAt(random_id);
 }
