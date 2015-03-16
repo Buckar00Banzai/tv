@@ -96,11 +96,9 @@ function muteToggle() {
 	}
 }
 
-function muteColor() {
-	$('#mute').click(function() {
-		$(this).toggleClass( "yellowBack" );
-	})
-}
+$('#mute').click(function() {
+	$(this).toggleClass( "yellowBack" );
+});
 
 /*--------------------------------*/
 
