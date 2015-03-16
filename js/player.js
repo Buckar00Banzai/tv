@@ -1,36 +1,21 @@
 var scenes;
-var tracks;
 var currentTrackPos = 0;
 var currentScenePos = 0;
 var playing = true;
-var trackLoaded = false;
-var currentTrackManagerId;
 var playerBG;
 
 
 $(document).ready(function(){
-	getTracks();
-	getScenes();
 	initSC();
 })
 
-function getTracks(){
-	$.get('http://poolsideapi2.herokuapp.com/tracks?p=2', function(data){
-		tracks = data;
-	}).done(function(){
-		shuffle(tracks);
-		playTrack(0);
-	});
-}
-
-
-function getScenes(){
-	$.get('http://poolsideapi2.herokuapp.com/scenes?p=2', function(data){
-		scenes = data;
-	}).done(function(){
-		shuffle(scenes);
-	});
-}
+// function getScenes(){
+// 	$.get('http://poolsideapi2.herokuapp.com/scenes?p=2', function(data){
+// 		scenes = data;
+// 	}).done(function(){
+// 		shuffle(scenes);
+// 	});
+// }
 
 function initSC(){
 	SC.initialize({
@@ -57,52 +42,6 @@ function playBtn(){
 	}
 }
 
-
-
-
-
-function loadTrackMeta(pos){
-    $('p.song').html("<a href='"+ tracks[currentTrackPos].scUrl+"' target='_blank'>" + tracks[pos].title + " <br/> <i class='fa fa-soundcloud'></i> <br/> <span>" + tracks[pos].artist) + "</span></a>";
-}
-
-function playTrack(pos){
-	loader();
-	var trackId = tracks[pos].scId;
-	SC.stream("/tracks/" + trackId,{
-		onfinish: function() {
-    		skipTrack();
-  		},
-  		onsuspend: function() {
-    		skipTrack();
-  		},
-  		ondataerror : function(){
-  			alert('error');
-  		}
-	}, function(sound){
-  		sound.play({
-	    onload: function() {
-	      if (this.readyState == 2) {
-	        skipTrack();
-	      }
-	    }
-		});
-  		$('.play').addClass('pause');
-  		if( playerBG){
-  			playerBG.playVideo();
-  		}
-  		currentTrackManagerId = sound.sID;
-	});
-	loadTrackMeta(pos);
-	trackLoaded = true;
-	playing = true;
-}
-
-function pauseTrack(){
-	soundManager.pause(currentTrackManagerId);
-}
-
-
-
 /*----------------*/
 
 
@@ -111,7 +50,16 @@ function onYouTubeIframeAPIReady() {
 	playerBG = new YT.Player('videoHero', {
 	  height: '135%',
       width: '135%',
-      playerVars: { 'autoplay': 1, 'controls': 1,'autohide':1,'wmode':'opaque', 'volume' : 0 },
+      playerVars: {
+      	'autoplay': 1,
+      	'controls': 1,
+      	'autohide':1,
+      	'wmode':'opaque',
+      	'origin': 'http://galoremag.com',
+      	'loop': 1,
+      	'listType': 'playlist',
+		'list': 'PLUfG5WpANuJpIm62ldjjpunTRb3hABEA4'
+      },
 	  videoId: '',
 	  events: {
 	    'onReady': onPlayerReady,
