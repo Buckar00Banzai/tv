@@ -68,11 +68,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-		if (playerBG.getDuration() < 1){
-	        skipScene();
-	   	} else {
-        	event.target.playVideo();
-        }
+	event.target.playVideo();
 }
 
 function onPlayerStateChange(event) {
