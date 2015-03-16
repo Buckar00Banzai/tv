@@ -88,6 +88,14 @@ function skipScene(){
 	playerBG.nextVideo();
 }
 
+function muteToggle() {
+	if (playerBG.isMuted(true) {
+		playerBG.unMute();
+	} else {
+		playerBG.mute();
+	});
+}
+
 /*--------------------------------*/
 
 function loader(){
