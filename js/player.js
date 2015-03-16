@@ -90,9 +90,8 @@ function getRandomId() {
 }
 
 function skipScene(){
-	event.data = 0;
 	$('#videoHero').css({'opacity' : '0'});
-	playerBG.playVideoAt(random_id);
+	playerBG.nextVideo();
 }
 
 /*--------------------------------*/
