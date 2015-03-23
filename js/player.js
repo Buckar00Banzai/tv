@@ -6,20 +6,13 @@ var playerBG;
 
 $(document).ready(function(){
 	getScenes();
-	initSC();
 })
 
 function getScenes(){
-	$.get('http://165.225.129.212:8080/vids', function(data){
+	$.get('165.225.129.212:8080/vids', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
-	});
-}
-
-function initSC(){
-	SC.initialize({
-	    client_id: "79cdb380ce78f8151a711462d92a2f11"
 	});
 }
 
