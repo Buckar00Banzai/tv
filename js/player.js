@@ -56,10 +56,9 @@ function onYouTubeIframeAPIReady() {
 			'autohide':1,
 			'enablejsapi': 1,
 			'wmode':'opaque',
+			'volume':0,
 			'origin': 'http://galoremag.com',
-			'loop': 1,
-			'listType': 'playlist',
-			'list': 'PLUfG5WpANuJpIm62ldjjpunTRb3hABEA4'
+			'loop': 1
 		},
 		videoId: '',
 		events: {
