@@ -80,12 +80,16 @@ function onPlayerReady(event) {
 
 function onPlayerStateChange(event) {
 	if (event.data == 0){
-	  skipScene();
+		skipScene();
 	}
 
 	if (event.data == YT.PlayerState.PLAYING) {
 		$('#videoHero').css({'opacity' : '1'});
 	}
+}
+
+function loadYt(sceneId){
+   playerBG.loadVideoById(sceneId);
 }
 
 function skipScene(){
