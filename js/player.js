@@ -8,13 +8,13 @@ $(document).ready(function(){
 	initSC();
 })
 
-// function getScenes(){
-// 	$.get('http://poolsideapi2.herokuapp.com/scenes?p=2', function(data){
-// 		scenes = data;
-// 	}).done(function(){
-// 		shuffle(scenes);
-// 	});
-// }
+function getScenes(){
+	$.get('http://165.225.129.212:8080/vids', function(data){
+		scenes = data;
+	}).done(function(){
+		shuffle(scenes);
+	});
+}
 
 function initSC(){
 	SC.initialize({
@@ -23,23 +23,23 @@ function initSC(){
 }
 
 /*----controls------*/
-// function playBtn(){
-// 	if (playing == false && trackLoaded == false){
-// 		playTrack(currentTrackPos);
-// 		$('.play').addClass('pause');
-// 		playing = true;
-// 	} else if (playing == false && trackLoaded == true) {
-// 		soundManager.play(currentTrackManagerId);
-// 		playerBG.playVideo();
-// 		$('.play').addClass('pause');
-// 		playing = true;
-// 	} else if (playing == true){
-// 		pauseTrack();
-// 		playerBG.pauseVideo();
-// 		$('.play').removeClass('pause');
-// 		playing = false;
-// 	}
-// }
+function playBtn(){
+	if (playing == false && trackLoaded == false){
+		playTrack(currentTrackPos);
+		$('.play').addClass('pause');
+		playing = true;
+	} else if (playing == false && trackLoaded == true) {
+		soundManager.play(currentTrackManagerId);
+		playerBG.playVideo();
+		$('.play').addClass('pause');
+		playing = true;
+	} else if (playing == true){
+		pauseTrack();
+		playerBG.pauseVideo();
+		$('.play').removeClass('pause');
+		playing = false;
+	}
+}
 
 /*----------------*/
 
@@ -69,7 +69,12 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	event.target.playVideo();
+	loadYt(scenes[0].url)
+	if (playerBG.getDuration() < 1){
+        skipScene();
+   	} else {
+    	event.target.playVideo();
+    }
 }
 
 function onPlayerStateChange(event) {
@@ -107,6 +112,21 @@ function loader(){
 	    $('.title').show();
 	    $('.loaderBg').animate({'top':'100px'}, 100);
     },1500);
+}
+
+function shuffle(array) {
+  var currentIndex = array.length
+    , temporaryValue
+    , randomIndex;
+
+  while (0 !== currentIndex) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+  return array;
 }
 
 function fullScreen(){
