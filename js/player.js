@@ -1,10 +1,11 @@
-
+var scenes;
 var currentScenePos = 0;
 var playing = true;
 var playerBG;
 
 
 $(document).ready(function(){
+	getScenes();
 	initSC();
 })
 
