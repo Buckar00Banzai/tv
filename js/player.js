@@ -2,6 +2,7 @@ var scenes;
 var currentScenePos = 0;
 var playing = true;
 var playerBG;
+var vids = new XMLHttpRequest();
 
 
 $(document).ready(function(){
@@ -9,9 +10,9 @@ $(document).ready(function(){
 })
 
 function getScenes(){
-	$.get('165.225.129.212:8080/vids', function(data){
+	vids.open('get','https://165.225.129.212:8080/vids', function(data) {
 		scenes = data;
-	}).done(function(){
+	}, true).done(function(){
 		shuffle(scenes);
 	});
 }
