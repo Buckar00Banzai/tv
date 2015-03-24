@@ -4,7 +4,7 @@ var playing = true;
 var playerBG;
 
 myAudio = new Audio('./media/static.ogg'); 
-myAudio.volume = 0.1;
+myAudio.volume = 0.2;
 
 if (typeof myAudio.loop == 'boolean')
 {
@@ -76,7 +76,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	loadYt(scenes[0].url)
+	loadYt(scenes[1].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
 
