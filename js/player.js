@@ -78,7 +78,6 @@ function onPlayerStateChange(event) {
 	if (event.data == 0){
 		skipScene();
 	}
-
 	if (event.data == YT.PlayerState.PLAYING) {
 		tvStatic.pause();
 		$('#videoHero').css({'opacity' : '1'});
