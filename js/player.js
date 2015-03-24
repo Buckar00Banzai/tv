@@ -61,7 +61,7 @@ function onYouTubeIframeAPIReady() {
 			'autohide': 1,
 			// 'enablejsapi': 1,
 			'wmode':'opaque',
-			'volume': '0',
+			'volume': 0,
 			'origin': 'http://galoremag.com'
 			// 'loop': 1
 		},
@@ -77,8 +77,6 @@ function onPlayerReady(event) {
 	loadYt(scenes[0].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
-
-
    	} else {
     	event.target.playVideo();
     }
