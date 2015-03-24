@@ -71,7 +71,6 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	loadYt(scenes[0].url);
     event.target.playVideo();
 }
 
