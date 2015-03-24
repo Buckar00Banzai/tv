@@ -33,10 +33,12 @@ function getScenes(){
 
 /*----controls------*/
 function playBtn(){
-	if (playing == false){
+	if (playing == false && trackLoaded == false){
+		playTrack(currentTrackPos);
 		$('.play').addClass('pause');
 		playing = true;
-	} else if (playing == false ) {
+	} else if (playing == false && trackLoaded == true) {
+		soundManager.play(currentTrackManagerId);
 		playerBG.playVideo();
 		$('.play').addClass('pause');
 		playing = true;
@@ -58,10 +60,10 @@ function onYouTubeIframeAPIReady() {
 		playerVars: {
 			'autoplay': 1,
 			'controls': 1,
-			'autohide': 1,
+			'autohide':1,
 			// 'enablejsapi': 1,
 			'wmode':'opaque',
-			'volume': 0,
+			'volume':0,
 			'origin': 'http://galoremag.com'
 			// 'loop': 1
 		},
@@ -77,6 +79,8 @@ function onPlayerReady(event) {
 	loadYt(scenes[0].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
+
+
    	} else {
     	event.target.playVideo();
     }
@@ -87,7 +91,6 @@ function onPlayerStateChange(event) {
 		skipScene();
 	}
 	if (event.data == YT.PlayerState.PLAYING) {
-		myAudio.pause();
 		$('#videoHero').css({'opacity' : '1'});
 	}
 }
@@ -98,7 +101,6 @@ function loadYt(sceneId){
 
 function skipScene(){
 	$('#videoHero').css({'opacity' : '0'});
-	myAudio.play();
 	if (currentScenePos < (scenes.length - 1)){
 		currentScenePos ++
 		loadYt (scenes[currentScenePos].url)
@@ -112,7 +114,7 @@ function muteToggle() {
 	if (playerBG.isMuted(true)) {
 		$('#mute').removeClass('yellowBack') && playerBG.unMute();
 	} else {
-		$('#mute').addClass('yellowBack') && playerBG.mute() && myAudio.pause();
+		$('#mute').addClass('yellowBack') && playerBG.mute();
 	}
 }
 
