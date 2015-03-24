@@ -78,7 +78,7 @@ function onPlayerReady(event) {
 	if (playerBG.getDuration() < 1){
         skipScene();
    	} else {
-    	event.target.playVideo();
+    	playerBG.playVideo();
     }
 }
 
