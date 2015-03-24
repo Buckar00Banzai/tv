@@ -116,7 +116,7 @@ function muteToggle() {
 	if (playerBG.isMuted(true)) {
 		$('#mute').removeClass('yellowBack') && playerBG.unMute();
 	} else {
-		$('#mute').addClass('yellowBack') && playerBG.mute();
+		$('#mute').addClass('yellowBack') && playerBG.mute() && myAudio.pause();
 	}
 }
 
