@@ -34,16 +34,11 @@ function getScenes(){
 /*----controls------*/
 function playBtn(){
 	if (playing == false){
-		$('.play').addClass('pause');
-		playing = true;
+		$('.play').addClass('pause') && playing = true;
 	} else if (playing == false ) {
-		playerBG.playVideo();
-		$('.play').addClass('pause');
-		playing = true;
+		playerBG.playVideo() && $('.play').addClass('pause') && playing = true;
 	} else if (playing == true){
-		playerBG.pauseVideo();
-		$('.play').removeClass('pause');
-		playing = false;
+		playerBG.pauseVideo() && myAudio.pause() && $('.play').removeClass('pause') && playing = false;
 	}
 }
 
