@@ -60,10 +60,10 @@ function onYouTubeIframeAPIReady() {
 		playerVars: {
 			'autoplay': 1,
 			'controls': 1,
-			'autohide':1,
+			'autohide': 1,
 			// 'enablejsapi': 1,
 			'wmode':'opaque',
-			'volume':0,
+			'volume': '0',
 			'origin': 'http://galoremag.com'
 			// 'loop': 1
 		},
@@ -76,7 +76,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	loadYt(scenes[0].url)
+	loadYt(scenes[1].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
 
