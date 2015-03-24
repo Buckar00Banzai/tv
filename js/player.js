@@ -34,7 +34,6 @@ function getScenes(){
 /*----controls------*/
 function playBtn(){
 	if (playing == false && trackLoaded == false){
-		playTrack(currentTrackPos);
 		$('.play').addClass('pause');
 		playing = true;
 	} else if (playing == false && trackLoaded == true) {
