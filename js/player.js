@@ -33,11 +33,11 @@ function getScenes(){
 
 /*----controls------*/
 function playBtn(){
-	if (event.data == YT.PlayerState.PAUSED){
+	if (playing == false) {
 		playerBG.playVideo();
 		$('.play').addClass('pause');
 		playing = true;
-	} else if (event.data == YT.PlayerState.PLAYING) {
+	} else if (playing == true){
 		playerBG.pauseVideo();
 		$('.play').removeClass('pause');
 		playing = false;
