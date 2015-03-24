@@ -3,13 +3,28 @@ var currentScenePos = 0;
 var playing = true;
 var playerBG;
 
+tvStatic = new Audio('./media/static.ogg'); 
+tvStatic.volume = 0.2;
+
+if (typeof tvStatic.loop == 'boolean')
+{
+    tvStatic.loop = true;
+}
+else
+{
+    tvStatic.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+    }, false);
+}
+tvStatic.play();
 
 $(document).ready(function(){
 	getScenes();
 })
 
 function getScenes(){
-	$.get('http://165.225.129.212:8080/vids', function(data){
+	$.get('http://165.225.129.212:8080/vids/', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
@@ -19,16 +34,13 @@ function getScenes(){
 /*----controls------*/
 function playBtn(){
 	if (playing == false && trackLoaded == false){
-		playTrack(currentTrackPos);
 		$('.play').addClass('pause');
 		playing = true;
 	} else if (playing == false && trackLoaded == true) {
-		soundManager.play(currentTrackManagerId);
 		playerBG.playVideo();
 		$('.play').addClass('pause');
 		playing = true;
 	} else if (playing == true){
-		pauseTrack();
 		playerBG.pauseVideo();
 		$('.play').removeClass('pause');
 		playing = false;
@@ -50,7 +62,7 @@ function onYouTubeIframeAPIReady() {
 			// 'enablejsapi': 1,
 			'wmode':'opaque',
 			'volume':0,
-			'origin': 'http://galoremag.com'
+			'origin': 'http://dev.galoremag.com'
 			// 'loop': 1
 		},
 		videoId: '',
@@ -76,6 +88,7 @@ function onPlayerStateChange(event) {
 	}
 
 	if (event.data == YT.PlayerState.PLAYING) {
+		tvStatic.pause();
 		$('#videoHero').css({'opacity' : '1'});
 	}
 }
@@ -85,6 +98,7 @@ function loadYt(sceneId){
 }
 
 function skipScene(){
+	tvStatic.play();
 	$('#videoHero').css({'opacity' : '0'});
 	if (currentScenePos < (scenes.length - 1)){
 		currentScenePos ++
