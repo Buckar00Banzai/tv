@@ -71,7 +71,12 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	skipScene();
+	loadYt(scenes[0].url)
+	if (playerBG.getDuration() < 1){
+        skipScene();
+   	} else {
+    	event.target.playVideo();
+    }
 }
 
 function onPlayerStateChange(event) {
