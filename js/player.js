@@ -9,7 +9,7 @@ $(document).ready(function(){
 })
 
 function getScenes(){
-	$.get('http://165.225.129.212:8080/vids?p=2', function(data){
+	$.get('http://165.225.129.212:8080/vids', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
@@ -47,11 +47,11 @@ function onYouTubeIframeAPIReady() {
 			'autoplay': 1,
 			'controls': 1,
 			'autohide':1,
-			'enablejsapi': 1,
+			// 'enablejsapi': 1,
 			'wmode':'opaque',
 			'volume':0,
-			'origin': 'http://galoremag.com',
-			'loop': 1
+			'origin': 'http://galoremag.com'
+			// 'loop': 1
 		},
 		videoId: '',
 		events: {
@@ -85,9 +85,14 @@ function loadYt(sceneId){
 }
 
 function skipScene(){
-	playerBG.stopVideo();
 	$('#videoHero').css({'opacity' : '0'});
-	playerBG.nextVideo();
+	if (currentScenePos < (scenes.length - 1)){
+		currentScenePos ++
+		loadYt (scenes[currentScenePos].url)
+	} else {
+		currentScenePos = 0;
+		loadYt (scenes[currentScenePos].url)
+	}
 }
 
 function muteToggle() {
