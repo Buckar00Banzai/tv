@@ -245,13 +245,13 @@ a:focus {
   cursor: pointer;
   height: 74px;
   width: 74px;
-  background: url('/images/play.png') no-repeat;
+  background: url('../images/play.png') no-repeat;
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
 .sidebar .play.pause {
-  background: url('/images/pause.png') no-repeat;
+  background: url('../images/pause.png') no-repeat;
 }
 .sidebar .play:hover {
   opacity: 0.8;
