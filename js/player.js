@@ -103,8 +103,6 @@ function muteToggle() {
 	}
 }
 
-/*--------------------------------*/
-
 function loader(){
 	$('.title').hide();
 	$('.loader').show();
