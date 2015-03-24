@@ -31,22 +31,22 @@ function getScenes(){
 	});
 }
 
-/*----controls------*/
-function playBtn(){
-	if (playing == false && trackLoaded == false){
-		$('.play').addClass('pause');
-		playing = true;
-	} else if (playing == false && trackLoaded == true) {
-		soundManager.play(currentTrackManagerId);
-		playerBG.playVideo();
-		$('.play').addClass('pause');
-		playing = true;
-	} else if (playing == true){
-		playerBG.pauseVideo();
-		$('.play').removeClass('pause');
-		playing = false;
-	}
-}
+// /*----controls------*/
+// function playBtn(){
+// 	if (playing == false && trackLoaded == false){
+// 		$('.play').addClass('pause');
+// 		playing = true;
+// 	} else if (playing == false && trackLoaded == true) {
+// 		soundManager.play(currentTrackManagerId);
+// 		playerBG.playVideo();
+// 		$('.play').addClass('pause');
+// 		playing = true;
+// 	} else if (playing == true){
+// 		playerBG.pauseVideo();
+// 		$('.play').removeClass('pause');
+// 		playing = false;
+// 	}
+// }
 
 /*----------------*/
 
