@@ -1,2 +1,2 @@
-# tv
-GaloreTV
+# fm
+GaloreFM
