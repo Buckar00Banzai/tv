@@ -33,10 +33,10 @@ function getScenes(){
 
 /*----controls------*/
 function playBtn(){
-	if (playing == false && trackLoaded == false){
+	if (playing == false){
 		$('.play').addClass('pause');
 		playing = true;
-	} else if (playing == false && trackLoaded == true) {
+	} else if (playing == false) {
 		playerBG.playVideo();
 		$('.play').addClass('pause');
 		playing = true;
