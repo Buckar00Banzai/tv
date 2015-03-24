@@ -1,0 +1,22 @@
+{
+  "name": "tv",
+  "version": "1.0.0",
+  "description": "Galore's Online TV Network",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/galoremag/tv.git"
+  },
+  "keywords": [
+    "tv"
+  ],
+  "author": "Aaron Smulktis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/galoremag/tv/issues"
+  },
+  "homepage": "https://github.com/galoremag/tv"
+}
