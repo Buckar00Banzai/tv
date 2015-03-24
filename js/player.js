@@ -3,6 +3,27 @@ var currentScenePos = 0;
 var playing = true;
 var playerBG;
 
+myAudio = new Audio('./media/static.ogg'); 
+myAudio.volume = 0.1;
+
+function playStatic() {
+	if (typeof myAudio.loop == 'boolean')
+	{
+	    myAudio.loop = true;
+	}
+	else
+	{
+	    myAudio.addEventListener('ended', function() {
+	        this.currentTime = 0;
+	        this.play();
+	    }, false);
+	}
+	myAudio.play();
+}
+
+function stopStatic() {
+	myAudio.pause();
+}
 
 $(document).ready(function(){
 	getScenes();
@@ -28,7 +49,6 @@ function playBtn(){
 		$('.play').addClass('pause');
 		playing = true;
 	} else if (playing == true){
-		pauseTrack();
 		playerBG.pauseVideo();
 		$('.play').removeClass('pause');
 		playing = false;
@@ -65,6 +85,8 @@ function onPlayerReady(event) {
 	loadYt(scenes[0].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
+
+
    	} else {
     	event.target.playVideo();
     }
@@ -74,8 +96,8 @@ function onPlayerStateChange(event) {
 	if (event.data == 0){
 		skipScene();
 	}
-
 	if (event.data == YT.PlayerState.PLAYING) {
+		stopStatic();
 		$('#videoHero').css({'opacity' : '1'});
 	}
 }
@@ -86,6 +108,7 @@ function loadYt(sceneId){
 
 function skipScene(){
 	$('#videoHero').css({'opacity' : '0'});
+	playStatic();
 	if (currentScenePos < (scenes.length - 1)){
 		currentScenePos ++
 		loadYt (scenes[currentScenePos].url)
