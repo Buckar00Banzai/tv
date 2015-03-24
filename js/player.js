@@ -17,9 +17,9 @@ else
         this.play();
     }, false);
 }
-myAudio.play();
 
 $(document).ready(function(){
+	myAudio.play();
 	getScenes();
 })
 
@@ -34,13 +34,19 @@ function getScenes(){
 /*----controls------*/
 function playBtn(){
 	if (playing == false){
-		$('play').addClass('pause') && playing = true;
+		$('.play').addClass('pause');
+		playing = true;
 	} else if (playing == false ) {
-		playerBG.playVideo() && $('play').addClass('pause') && playing = true;
+		playerBG.playVideo();
+		$('.play').addClass('pause');
+		playing = true;
 	} else if (playing == true){
-		playerBG.pauseVideo() && myAudio.pause() && $('play').removeClass('pause') && playing = false;
+		playerBG.pauseVideo();
+		$('.play').removeClass('pause');
+		playing = false;
 	}
 }
+
 /*----------------*/
 
 
@@ -68,11 +74,9 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	loadYt(scenes[1].url)
+	loadYt(scenes[0].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
-
-
    	} else {
     	event.target.playVideo();
     }
