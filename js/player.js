@@ -3,28 +3,28 @@ var currentScenePos = 0;
 var playing = true;
 var playerBG;
 
-myAudio = new Audio('./media/static.ogg'); 
-myAudio.volume = 0.1;
+tvStatic = new Audio('./media/static.ogg'); 
+tvStatic.volume = 0.2;
 
-if (typeof myAudio.loop == 'boolean')
+if (typeof tvStatic.loop == 'boolean')
 {
-    myAudio.loop = true;
+    tvStatic.loop = true;
 }
 else
 {
-    myAudio.addEventListener('ended', function() {
+    tvStatic.addEventListener('ended', function() {
         this.currentTime = 0;
         this.play();
     }, false);
 }
-myAudio.play();
+tvStatic.play();
 
 $(document).ready(function(){
 	getScenes();
 })
 
 function getScenes(){
-	$.get('http://165.225.129.212:8080/vids', function(data){
+	$.get('http://165.225.129.212:8080/vids/', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
@@ -74,7 +74,7 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	loadYt(scenes[0].url)
+	loadYt(scenes[1].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
    	} else {
@@ -88,7 +88,7 @@ function onPlayerStateChange(event) {
 	}
 
 	if (event.data == YT.PlayerState.PLAYING) {
-		myAudio.pause();
+		tvStatic.pause();
 		$('#videoHero').css({'opacity' : '1'});
 	}
 }
@@ -98,7 +98,7 @@ function loadYt(sceneId){
 }
 
 function skipScene(){
-	myAudio.play();
+	tvStatic.play();
 	$('#videoHero').css({'opacity' : '0'});
 	if (currentScenePos < (scenes.length - 1)){
 		currentScenePos ++
