@@ -17,9 +17,9 @@ else
         this.play();
     }, false);
 }
+myAudio.play();
 
 $(document).ready(function(){
-	myAudio.play();
 	getScenes();
 })
 
@@ -77,6 +77,8 @@ function onPlayerReady(event) {
 	loadYt(scenes[0].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
+
+
    	} else {
     	event.target.playVideo();
     }
