@@ -6,10 +6,6 @@ var playerBG;
 myAudio = new Audio('./media/static.ogg'); 
 myAudio.volume = 0.1;
 
-$(document).ready(function(){
-	getScenes();
-});
-
 if (typeof myAudio.loop == 'boolean')
 {
     myAudio.loop = true;
@@ -22,6 +18,10 @@ else
     }, false);
 }
 myAudio.play();
+
+$(document).ready(function(){
+	getScenes();
+})
 
 function getScenes(){
 	$.get('http://165.225.129.212:8080/vids', function(data){
