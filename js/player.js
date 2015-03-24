@@ -37,7 +37,7 @@ function playBtn(){
 		playerBG.playVideo();
 		$('.play').addClass('pause');
 		playing = true;
-	} else if (playing == true){
+	} else (playing == true){
 		playerBG.pauseVideo();
 		$('.play').removeClass('pause');
 		playing = false;
