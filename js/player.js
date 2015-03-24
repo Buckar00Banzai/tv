@@ -75,12 +75,14 @@ function onYouTubeIframeAPIReady() {
 	});
 }
 
+function loadYt(sceneId){
+   playerBG.loadVideoById(sceneId);
+}
+
 function onPlayerReady(event) {
-	loadYt(scenes[1].url)
+	loadYt(scenes[1].url);
 	if (playerBG.getDuration() < 1){
         skipScene();
-
-
    	} else {
     	event.target.playVideo();
     }
@@ -93,10 +95,6 @@ function onPlayerStateChange(event) {
 	if (event.data == YT.PlayerState.PLAYING) {
 		$('#videoHero').css({'opacity' : '1'});
 	}
-}
-
-function loadYt(sceneId){
-   playerBG.loadVideoById(sceneId);
 }
 
 function skipScene(){
