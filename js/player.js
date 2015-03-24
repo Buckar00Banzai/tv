@@ -9,7 +9,7 @@ $(document).ready(function(){
 })
 
 function getScenes(){
-	$.get('http://165.225.129.212:8080/vids', function(data){
+	$.get('http://165.225.129.212:8080/vids?p=2', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
