@@ -13,6 +13,13 @@
 @blue : #5863e2;
 @yellow : #f2ff02;
 
+.transition {
+  -o-transition: 1s all easeinout;
+  -moz-transition: 1s all easeinout;
+  -webkit-transition: 1s all easeinout;
+  transition: 1s all easeinout;
+}
+
 .blue-gradient (@startColor: #afb4f1; @endColor: #32ffff;) {
   background: @endColor; /* Old browsers */
   background: -moz-linear-gradient(-45deg, @startColor 0%, @endColor 100%); /* FF3.6+ */
@@ -278,6 +285,96 @@ a:focus {color: @pink; text-decoration: none;}
 
 .sidebar .skip:hover{
   opacity: 0.8;
+}
+
+.sidebar .remote {
+  display: block;
+  width: 234px;
+  height: 545px;
+  position: absolute;
+  bottom: -70px;
+  background: url('../images/remote.png') no-repeat;
+  -vendor-animation-duration: 3s;
+  -vendor-animation-delay: 2s;
+}
+
+.remote ul.main-btns {
+  position: absolute;
+  top: 80px;
+  left: 15px;
+}
+
+.remote ul li {
+  width: 51px;
+  height: 21px;
+  overflow: hidden;
+}
+
+.remote ul.sub-btns li.blank {
+  background: transparent;
+  width: 48px;
+  float: left;
+}
+
+.remote ul.sub-btns li.grey-btn {
+  width: 48px;
+  height: 36px;
+}
+
+.remote ul.sub-btns {
+  position: absolute;
+  top: 148px;
+  left: 21px;
+}
+
+.remote ul.sub-btns li.grey-btn {
+  float: left;
+}
+
+.remote ul.sub-btns li.blue-btn {
+  float: left;
+}
+
+li.pink-btn {
+  display: block;
+  background: url('../images/pink-btn.png') no-repeat;
+  background-size: 51px 68px;
+  background-position: 0px 0px;
+}
+
+li.pink-btn:hover {
+  display: block;
+  background: url('../images/pink-btn.png') no-repeat;
+  background-size: 51px 68px;
+  background-position: 0px -34px;
+}
+
+li.grey-btn {
+  display: block;
+  background: url('../images/grey-btn.png') no-repeat;
+  background-size: 51px 68px;
+  background-position: 0px 0px;
+}
+
+li.grey-btn:hover {
+  display: block;
+  background: url('../images/grey-btn.png') no-repeat;
+  background-size: 51px 68px;
+  background-position: 0px -34px;
+}
+
+li.blue-btn {
+  display: block;
+  background: url('../images/blue-btn.png') no-repeat;
+  background-size: 51px 68px;
+  background-position: 0px 0px;
+}
+
+li.blue-btn:hover {
+  display: block;
+  background: url('../images/blue-btn.png') no-repeat;
+  background-size: 51px 68px;
+  background-position: 0px -34px;
 }
 
 .btn {

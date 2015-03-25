@@ -35,7 +35,7 @@
 		<div class="sidebar">
 			<a class="logo" href="#"><span>GaloreTV</span></a>
 			<div class='play pause' onclick="playBtn()" value="Pause"></div>
-			<hr />
+
 			<p class="song"></p>
 
 		    <div class="loader">
@@ -43,9 +43,35 @@
 			    <div class="loaderBg"></div>
 	    	</div>
 
-			<div id="mute" class='btn' onclick="muteToggle()">MUTE <i class="fa fa-headphones"></i></div>
+			<!-- <div id="mute" class='btn' onclick="muteToggle()">MUTE <i class="fa fa-headphones"></i></div>
 			<div class="btn" onclick="skipScene()">NEXT CLIP <i class="fa fa-camera-retro"></i></div>
-			<div class="btn" onclick="fullScreen()">FULLSCREEN <i class="fa fa-expand"></i></div>
+			<div class="btn" onclick="fullScreen()">FULLSCREEN <i class="fa fa-expand"></i></div> -->
+			<div class="remote animated rotateInUpLeft">
+				<ul class="main-btns">
+					<li class="pink-btn" onclick="playBtn()"></li>
+					<li class="pink-btn" onclick="muteToggle()"></li>
+				</ul>
+				<ul class="sub-btns">
+					<li class="grey-btn"></li>
+					<li class="grey-btn" onclick="skipScene()"></li>
+					<li class="grey-btn"></li>
+					<li class="grey-btn"></li>
+					<li class="grey-btn"></li>
+					<li class="grey-btn"></li>
+					<li class="grey-btn"></li>
+					<li class="grey-btn"></li>
+					<li class="blank"></li>
+					<li class="blank"></li>
+					<li class="grey-btn"></li>
+					<li class="grey-btn"></li>
+					<li class="blank"></li>
+					<li class="blank"></li>
+					<li class="blank"></li>
+					<li class="blank"></li>
+					<li class="blue-btn"></li>
+					<li class="blue-btn"></li>
+				</ul>
+			</div>
 	</div>
 
 	<div id="videoHero"></div>
