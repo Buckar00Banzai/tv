@@ -359,7 +359,7 @@ li.pink-btn:hover {
   background-size: 51px 68px;
   background-position: 0px -34px;
 }
-li#mute.on {
+li#mute.lit {
   display: block;
   background: url('../images/pink-btn.png') no-repeat;
   background-size: 51px 68px;
