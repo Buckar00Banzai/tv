@@ -107,9 +107,9 @@ function skipScene(){
 
 function muteToggle() {
 	if (playerBG.isMuted(true)) {
-		$('#mute').removeClass('yellowBack') && playerBG.unMute();
+		$('#mute').removeClass('on') && playerBG.unMute();
 	} else {
-		$('#mute').addClass('yellowBack') && playerBG.mute();
+		$('#mute').addClass('on') && playerBG.mute();
 	}
 }
 
