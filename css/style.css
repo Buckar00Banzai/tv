@@ -321,12 +321,16 @@ a:focus {
 }
 .remote ul li {
   width: 51px;
-  height: 21px;
+  height: 30px;
   overflow: hidden;
+}
+.remote ul.main-btns li:last-child {
+  margin-top: -8px;
 }
 .remote ul.sub-btns li.blank {
   background: transparent;
   width: 48px;
+  height: 21px;
   float: left;
 }
 .remote ul.sub-btns li.grey-btn {
@@ -338,10 +342,9 @@ a:focus {
   top: 148px;
   left: 21px;
 }
-.remote ul.sub-btns li.grey-btn {
-  float: left;
-}
-.remote ul.sub-btns li.blue-btn {
+.remote ul.sub-btns li.grey-btn,
+.remote ul.sub-btns li.blue-btn,
+.remote ul.sub-btns li.grn-btn {
   float: left;
 }
 li.pink-btn {
@@ -378,6 +381,18 @@ li.blue-btn:hover {
   display: block;
   background: url('../images/blue-btn.png') no-repeat;
   background-size: 51px 68px;
+  background-position: 0px -34px;
+}
+li.grn-btn {
+  display: block;
+  background: url('../images/grn-btn.png') no-repeat;
+  background-size: 44px 68px;
+  background-position: 0px 0px;
+}
+li.grn-btn:hover {
+  display: block;
+  background: url('../images/grn-btn.png') no-repeat;
+  background-size: 44px 68px;
   background-position: 0px -34px;
 }
 .btn {
