@@ -77,14 +77,14 @@
 }
 
 .glory-gradient {
-  background: rgb(255,205,0); /* Old browsers */
-background: -moz-linear-gradient(45deg,  rgba(255,205,0,1) 0%, rgba(255,148,0,1) 24%, rgba(255,205,0,1) 24%, rgba(187,60,160,1) 94%); /* FF3.6+ */
-background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(255,205,0,1)), color-stop(24%,rgba(255,148,0,1)), color-stop(24%,rgba(255,205,0,1)), color-stop(94%,rgba(187,60,160,1))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(45deg,  rgba(255,205,0,1) 0%,rgba(255,148,0,1) 24%,rgba(255,205,0,1) 24%,rgba(187,60,160,1) 94%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(45deg,  rgba(255,205,0,1) 0%,rgba(255,148,0,1) 24%,rgba(255,205,0,1) 24%,rgba(187,60,160,1) 94%); /* Opera 11.10+ */
-background: -ms-linear-gradient(45deg,  rgba(255,205,0,1) 0%,rgba(255,148,0,1) 24%,rgba(255,205,0,1) 24%,rgba(187,60,160,1) 94%); /* IE10+ */
-background: linear-gradient(45deg,  rgba(255,205,0,1) 0%,rgba(255,148,0,1) 24%,rgba(255,205,0,1) 24%,rgba(187,60,160,1) 94%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffcd00', endColorstr='#bb3ca0',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+background: rgb(229,153,68); /* Old browsers */
+background: -moz-linear-gradient(45deg,  rgba(229,153,68,1) 0%, rgba(191,76,145,1) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,rgba(229,153,68,1)), color-stop(100%,rgba(191,76,145,1))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(45deg,  rgba(229,153,68,1) 0%,rgba(191,76,145,1) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(45deg,  rgba(229,153,68,1) 0%,rgba(191,76,145,1) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(45deg,  rgba(229,153,68,1) 0%,rgba(191,76,145,1) 100%); /* IE10+ */
+background: linear-gradient(45deg,  rgba(229,153,68,1) 0%,rgba(191,76,145,1) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e59944', endColorstr='#bf4c91',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 
 }
 
@@ -283,25 +283,27 @@ a:focus {color: @pink; text-decoration: none;}
 
 .sidebar .remote {
   display: block;
-  width: 234px;
+  width: 220px;
   height: 545px;
   position: absolute;
-  bottom: -70px;
+  top: 0px;
   background: url('../images/remote.png') no-repeat;
-  -vendor-animation-duration: 3s;
-  -vendor-animation-delay: 2s;
 }
 
 .remote ul.main-btns {
   position: absolute;
-  top: 80px;
-  left: 15px;
+  top: 125px;
+  left: 0;
 }
 
 .remote ul li {
-  width: 51px;
+  width: 45px;
   height: 30px;
   overflow: hidden;
+}
+
+.remote ul li.fullscreen {
+  margin: 0 22px;
 }
 
 .remote ul.main-btns li:last-child {
@@ -310,23 +312,33 @@ a:focus {color: @pink; text-decoration: none;}
 
 .remote ul.sub-btns li.blank {
   background: transparent;
-  width: 48px;
-  height: 21px;
+  width: 45px;
+  height: 36px;
   float: left;
 }
 
 .remote ul.sub-btns li.grey-btn {
-  width: 48px;
+  width: 45px;
   height: 36px;
 }
 
 .remote ul.sub-btns {
   position: absolute;
-  top: 148px;
-  left: 21px;
+  top: 190px;
+  left: 4px;
 }
 
 .remote ul.sub-btns li.grey-btn, .remote ul.sub-btns li.blue-btn, .remote ul.sub-btns li.grn-btn {
+  float: left;
+}
+
+.remote ul.social-btns {
+  position: absolute;
+  bottom: 0px;
+  left: 48px;
+}
+
+.remote ul.social-btns li {
   float: left;
 }
 
@@ -428,7 +440,71 @@ li.grn-btn:hover {
   background-color: @yellow;
 }
 
-.videoContainer{
+/*----------------------------
+  knobKnob Styles
+-----------------------------*/
+
+#bars {
+  position: absolute;
+  top: 360px;
+  left: 52px;
+  opacity: 0.66;
+}
+
+.knob{
+  width:83px;
+  height:83px;
+  position:relative;
+}
+
+.knob .top{
+  position:absolute;
+  top:0;
+  left:0;
+  width:83px;
+  height:83px;
+  background:url('../images/knob.png') no-repeat;
+  z-index:10;
+  cursor:default !important;
+}
+
+.knob .base{
+  width:83px;
+  height:83px;
+  border-radius:50%;
+  box-shadow:0 5px 0 #4a5056,5px 5px 5px rgba(0,0,0,0.3);
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+.knob .top:after{
+  content:'';
+  width:10px;
+  height:10px;
+  background-color:#666;
+  position:absolute;
+  top:50%;
+  left:10px;
+  margin-top:-5px;
+  border-radius: 50%;
+  cursor:default !important;
+  box-shadow: 0 0 1px #5a5a5a inset;
+}
+
+.knob [draggable] {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/*----------------------------
+  End knobKnob Styles
+-----------------------------*/
+
+
+.videoContainer {
   width: 80%;
   overflow: hidden;
 }

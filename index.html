@@ -33,19 +33,13 @@
 	
 	<div class="wrapper" >
 		<div class="sidebar">
-			<a class="logo" href="#"><span>GaloreTV</span></a>
-
-			<p class="song"></p>
 
 		    <div class="loader">
 			    <div class="loaderMask"></div>
 			    <div class="loaderBg"></div>
 	    	</div>
 
-			<!-- <div id="mute" class='btn' onclick="muteToggle()">MUTE <i class="fa fa-headphones"></i></div>
-			<div class="btn" onclick="skipScene()">NEXT CLIP <i class="fa fa-camera-retro"></i></div>
-			<div class="btn" onclick="fullScreen()">FULLSCREEN <i class="fa fa-expand"></i></div> -->
-			<div class="remote animated rotateInUpLeft">
+			<div class="remote">
 				<ul class="main-btns">
 					<li class="play pause pink-btn" onclick="playBtn()" value="Pause"></li>
 					<li id="mute" class="pink-btn" onclick="muteToggle()"></li>
@@ -53,32 +47,34 @@
 				<ul class="sub-btns">
 					<li class="grey-btn"></li>
 					<li class="grey-btn" onclick="skipScene()"></li>
-					<li class="grey-btn"></li>
-					<li class="grey-btn"></li>
-					<li class="grey-btn"></li>
-					<li class="grey-btn"></li>
-					<li class="grey-btn"></li>
-					<li class="grey-btn"></li>
 					<li class="blank"></li>
 					<li class="blank"></li>
 					<li class="grey-btn"></li>
 					<li class="grey-btn"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
+					<li class="grey-btn"></li>
+					<li class="grey-btn"></li>
+					<li class="fullscreen blue-btn" onclick="fullScreen()"></li>
+					<li class="grey-btn"></li>
+					<li class="grey-btn"></li>
+				</ul>
+				<ul class="social-btns">
 					<li class="blue-btn"></li>
 					<li class="blue-btn"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
-					<li class="blank"></li>
-					<li class="grn-btn" onclick="fullScreen()"></li>
 				</ul>
 			</div>
+
+			<div id="bars">
+                <div id="control">
+                </div>
+            </div>
+
+			<div class="credits">
+				<ul class="social-btns">
+					<li class="blue-btn"></li>
+					<li class="blue-btn"></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 
 	<div id="videoHero"></div>
@@ -99,6 +95,8 @@
 
 	<!-- SCRIPTS -->
 	<script src="./js/jquery.js"></script>
+	<script src="./js/knobKnob.jquery.js"></script>
+	<script src="./js/transform.js"></script>
 	<script src="./js/modernizr.custom.25477.js"></script>
 	<script src="./js/bootstrap.min.js"></script>
 	<script src="./js/animate.js"></script>

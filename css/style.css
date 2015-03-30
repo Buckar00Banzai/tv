@@ -13,21 +13,21 @@
   transition: 1s all easeinout;
 }
 .glory-gradient {
-  background: #ffcd00;
+  background: #e59944;
   /* Old browsers */
-  background: -moz-linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: -moz-linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #ffcd00), color-stop(24%, #ff9400), color-stop(24%, #ffcd00), color-stop(94%, #bb3ca0));
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e59944), color-stop(100%, #bf4c91));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: -webkit-linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: -o-linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: -ms-linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* IE10+ */
-  background: linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcd00', endColorstr='#bb3ca0', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e59944', endColorstr='#bf4c91', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
 }
 .transition {
@@ -221,21 +221,21 @@ a:focus {
   top: 0px;
   text-align: center;
   box-shadow: 0px 0px 25px rgba(250, 0, 50, 0.3);
-  background: #ffcd00;
+  background: #e59944;
   /* Old browsers */
-  background: -moz-linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: -moz-linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #ffcd00), color-stop(24%, #ff9400), color-stop(24%, #ffcd00), color-stop(94%, #bb3ca0));
+  background: -webkit-gradient(linear, left bottom, right top, color-stop(0%, #e59944), color-stop(100%, #bf4c91));
   /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: -webkit-linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: -o-linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* Opera 11.10+ */
-  background: -ms-linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: -ms-linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* IE10+ */
-  background: linear-gradient(45deg, #ffcd00 0%, #ff9400 24%, #ffcd00 24%, #bb3ca0 94%);
+  background: linear-gradient(45deg, #e59944 0%, #bf4c91 100%);
   /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcd00', endColorstr='#bb3ca0', GradientType=1);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e59944', endColorstr='#bf4c91', GradientType=1);
   /* IE6-9 fallback on horizontal gradient */
   -o-transition: 1s all easeinout;
   -moz-transition: 1s all easeinout;
@@ -323,45 +323,54 @@ a:focus {
 }
 .sidebar .remote {
   display: block;
-  width: 234px;
+  width: 220px;
   height: 545px;
   position: absolute;
-  bottom: -70px;
+  top: 0px;
   background: url('../images/remote.png') no-repeat;
-  -vendor-animation-duration: 3s;
-  -vendor-animation-delay: 2s;
 }
 .remote ul.main-btns {
   position: absolute;
-  top: 80px;
-  left: 15px;
+  top: 125px;
+  left: 0;
 }
 .remote ul li {
-  width: 51px;
+  width: 45px;
   height: 30px;
   overflow: hidden;
+}
+.remote ul li.fullscreen {
+  margin: 0 22px;
 }
 .remote ul.main-btns li:last-child {
   margin-top: -8px;
 }
 .remote ul.sub-btns li.blank {
   background: transparent;
-  width: 48px;
-  height: 21px;
+  width: 45px;
+  height: 36px;
   float: left;
 }
 .remote ul.sub-btns li.grey-btn {
-  width: 48px;
+  width: 45px;
   height: 36px;
 }
 .remote ul.sub-btns {
   position: absolute;
-  top: 148px;
-  left: 21px;
+  top: 190px;
+  left: 4px;
 }
 .remote ul.sub-btns li.grey-btn,
 .remote ul.sub-btns li.blue-btn,
 .remote ul.sub-btns li.grn-btn {
+  float: left;
+}
+.remote ul.social-btns {
+  position: absolute;
+  bottom: 0px;
+  left: 48px;
+}
+.remote ul.social-btns li {
   float: left;
 }
 li.pink-btn {
@@ -448,6 +457,61 @@ li.grn-btn:hover {
   color: #ff0066;
   background-color: #f2ff02;
 }
+/*----------------------------
+  knobKnob Styles
+-----------------------------*/
+#bars {
+  position: absolute;
+  top: 360px;
+  left: 52px;
+  opacity: 0.66;
+}
+.knob {
+  width: 83px;
+  height: 83px;
+  position: relative;
+}
+.knob .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 83px;
+  height: 83px;
+  background: url('../images/knob.png') no-repeat;
+  z-index: 10;
+  cursor: default !important;
+}
+.knob .base {
+  width: 83px;
+  height: 83px;
+  border-radius: 50%;
+  box-shadow: 0 5px 0 #4a5056, 5px 5px 5px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.knob .top:after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-color: #666;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  margin-top: -5px;
+  border-radius: 50%;
+  cursor: default !important;
+  box-shadow: 0 0 1px #5a5a5a inset;
+}
+.knob [draggable] {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+/*----------------------------
+  End knobKnob Styles
+-----------------------------*/
 .videoContainer {
   width: 80%;
   overflow: hidden;
