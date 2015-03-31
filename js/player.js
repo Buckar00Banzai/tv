@@ -151,6 +151,18 @@ function fullScreen(){
     }
 }
 
+// HEAT BTNS
+
+function heatToggle() {
+	if ($('#heatFader').hasClass('opaque')) {
+		this.removeClass('opaque');
+	} else {
+		this.addClass('opaque');
+	}
+}
+
+// VOLUME KNOB
+
 $(function(){
 
     var colors = [

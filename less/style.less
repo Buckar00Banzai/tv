@@ -95,6 +95,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e59944', end
   -webkit-transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);;
 }
 
+.opaque {
+  opacity: 1 !important;
+  .transition;
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -700,6 +705,43 @@ li.grn-btn:hover {
   left: -10%;
   top: -10%;
   opacity: 0;
+}
+
+#heatFader {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  opacity: 0;
+  background: linear-gradient(270deg, #ff00d8, #ffb200, #00ffdb);
+  background-size: 600% 600%;
+
+  .transition;
+  -webkit-animation: heatFade 22s ease infinite;
+  -moz-animation: heatFade 22s ease infinite;
+  -o-animation: heatFade 22s ease infinite;
+  animation: heatFade 22s ease infinite;
+
+  @-webkit-keyframes heatFade {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-moz-keyframes heatFade {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @-o-keyframes heatFade {
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
+  @keyframes heatFade { 
+      0%{background-position:0% 50%}
+      50%{background-position:100% 50%}
+      100%{background-position:0% 50%}
+  }
 }
 
 .wrapper:after{
