@@ -77,6 +77,51 @@
     background: url('../images/remote_@2X.png') no-repeat;
     background-size: 190px auto;
   }
+  li.pink-btn {
+    background: url('../images/btn-pink_@2X.png') no-repeat;
+    background-size: 51px 68px;
+  }
+  li.pink-btn:hover {
+    background: url('../images/btn-pink_@2X.png') no-repeat;
+    background-size: 51px 68px;
+    background-position: 0px -34px;
+  }
+  .remote ul.main-btns li.pause {
+    background: url('../images/btn-pink_@2X.png') no-repeat;
+    background-size: 51px 68px;
+    background-position: 0px -34px;
+  }
+  li#mute.lit {
+    background: url('../images/btn-pink_@2X.png') no-repeat;
+    background-size: 51px 68px;
+    background-position: 0px -34px;
+  }
+  li.grey-btn {
+    background: url('../images/btn-grey_@2X.png') no-repeat;
+    background-size: 51px 68px;
+    background-position: 0px 0px;
+  }
+  li.grey-btn:hover {
+    background: url('../images/btn-grey_@2X.png') no-repeat;
+    background-size: 51px 68px;
+    background-position: 0px -34px;
+  }
+  li.blue-btn {
+    background: url('../images/btn-blue_@2X.png') no-repeat;
+    background-size: 51px 68px;
+    background-position: 0px 0px;
+  }
+  li.blue-btn:hover {
+    background: url('../images/btn-blue_@2X.png') no-repeat;
+    background-size: 51px 68px;
+    background-position: 0px -34px;
+  }
+  .knob .top {
+    width: 83px;
+    height: 83px;
+    background: url('../images/knob_@2X.png') no-repeat;
+    background-size: 83px 83px;
+  }
 }
 /* 1.25 dpr */
 @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
