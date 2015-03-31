@@ -164,7 +164,7 @@ $(function(){
 
     var rad2deg = 180/Math.PI;
     var deg = 0;
-    var bars = $('#bars');
+    var bars = $('#dots');
 
     for(var i=0;i<colors.length;i++){
 
@@ -185,7 +185,7 @@ $(function(){
 
     $('#control').knobKnob({
         snap : 10,
-        value: 154,
+        value: 0,
         turn : function(ratio){
             numBars = Math.round(colorBars.length*ratio);
 
