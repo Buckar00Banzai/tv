@@ -34,10 +34,10 @@
 				lastDeg = 0,
 				doc = $(document);
 			
-			if(options.value > 0 && options.value <= 359){
+			if(options.value > 0 && options.value <= 349){
 				rotation = currentDeg = options.value;
 				knobTop.css('transform','rotate('+(currentDeg)+'deg)');
-				options.turn(currentDeg/359);
+				options.turn(currentDeg/349);
 			}
 			
 			knob.on('mousedown touchstart', function(e){
@@ -64,7 +64,7 @@
 					// we have to make sure that negative
 					// angles are turned into positive:
 					if(deg<0){
-						deg = 360 + deg;
+						deg = 350 + deg;
 					}
 					
 					// Save the starting position of the drag
@@ -78,10 +78,10 @@
 					// Making sure the current rotation
 					// stays between 0 and 359
 					if(tmp < 0){
-						tmp = 360 + tmp;
+						tmp = 350 + tmp;
 					}
-					else if(tmp > 359){
-						tmp = tmp % 360;
+					else if(tmp > 349){
+						tmp = tmp % 350;
 					}
 					
 					// Snapping in the off position:
@@ -99,7 +99,7 @@
 					lastDeg = tmp;
 		
 					knobTop.css('transform','rotate('+(currentDeg)+'deg)');
-					options.turn(currentDeg/359);
+					options.turn(currentDeg/349);
 				});
 			
 				doc.on('mouseup.rem  touchend.rem',function(){

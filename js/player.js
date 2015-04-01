@@ -171,7 +171,7 @@ $(function(){
         '93ff0b','9eff09','a9ff07','c2ff03','d7ff07',
         'f2ff0a','fff30a','ffdc09','ffce0a','ffc30a',
         'ffb509','ffa808','ff9908','ff8607','ff7005',
-        'ff5f04','ff4f03','f83a00'
+        'ff5f04','ff4f03','f83a00','ee2b00'
     ];
 
     var rad2deg = 180/Math.PI;
@@ -185,7 +185,6 @@ $(function(){
         // Create the colorbars
 
         $('<div class="colorBar">').css({
-            backgroundColor: '#'+colors[i],
             transform:'rotate('+deg+'deg)',
             top: -Math.sin(deg/rad2deg)*80+100,
             left: Math.cos((180 - deg)/rad2deg)*80+100,
@@ -197,7 +196,7 @@ $(function(){
 
     $('#control').knobKnob({
         snap : 10,
-        value: 0,
+        value: 40,
         turn : function(ratio){
             numBars = Math.round(colorBars.length*ratio);
 
