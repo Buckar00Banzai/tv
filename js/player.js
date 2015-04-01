@@ -2,7 +2,6 @@ var scenes;
 var currentScenePos = 0;
 var playing = true;
 var playerBG;
-var curVol = playerBG.getVolume();
 
 tvStatic = new Audio('./media/static.ogg'); 
 tvStatic.volume = 0.2;
@@ -32,7 +31,7 @@ function getScenes(){
 	});
 }
 
-$('#curVol').html('curVol');
+$('#curVol').html(playerBG.getVolume());
 
 /*----controls------*/
 function playBtn(){
