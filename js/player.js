@@ -155,9 +155,9 @@ function fullScreen(){
 
 function heatToggle() {
 	if ($('#heatFader').hasClass('opaque')) {
-		this.removeClass('opaque');
+		$('#heatFader').removeClass('opaque');
 	} else {
-		this.addClass('opaque');
+		$('#heatFader').addClass('opaque');
 	}
 }
 
