@@ -31,8 +31,6 @@ function getScenes(){
 	});
 }
 
-$('#curVol').html(playerBG.getVolume());
-
 /*----controls------*/
 function playBtn(){
 	if (playing == false) {
@@ -214,3 +212,5 @@ $(function(){
     });
 
 });
+
+$('#curVol').html(playerBG.getVolume());
