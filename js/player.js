@@ -2,7 +2,6 @@ var scenes;
 var currentScenePos = 0;
 var playing = true;
 var playerBG;
-var vol = playerBG.getVolume();
 
 tvStatic = new Audio('./media/static.ogg'); 
 tvStatic.volume = 0.2;
@@ -31,8 +30,6 @@ function getScenes(){
 		shuffle(scenes);
 	});
 }
-
-$('#curVol p').html(vol);
 
 /*----controls------*/
 function playBtn(){
