@@ -165,11 +165,13 @@ function heatDown() {
 
 $(function(){
 
+    var colors = 30;
+
     var rad2deg = 180/Math.PI;
     var deg = 0;
     var bars = $('#dots');
 
-    for(var i=0;i<30.length;i++){
+    for(var i=0;i<colors.length;i++){
 
         deg = i*12;
 
