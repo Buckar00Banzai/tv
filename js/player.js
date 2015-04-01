@@ -2,6 +2,7 @@ var scenes;
 var currentScenePos = 0;
 var playing = true;
 var playerBG;
+var curVol = playerBG.getVolume();
 
 tvStatic = new Audio('./media/static.ogg'); 
 tvStatic.volume = 0.2;
@@ -31,11 +32,7 @@ function getScenes(){
 	});
 }
 
-function getVol() {
-	var curVol = playerBG.getVolume();
-
-	$('#curVol').html(curVol);
-}
+$('#curVol').html(curVol);
 
 /*----controls------*/
 function playBtn(){
@@ -64,8 +61,7 @@ function onYouTubeIframeAPIReady() {
 			'autohide':1,
 			// 'enablejsapi': 1,
 			'wmode':'opaque',
-			'volume':50,
-			'origin': 'http://dev.galoremag.com'
+			'origin': 'http://galoremag.com'
 			// 'loop': 1
 		},
 		videoId: '',
