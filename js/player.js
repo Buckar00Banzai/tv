@@ -153,12 +153,12 @@ function fullScreen(){
 
 // HEAT BTNS
 
-function heatToggle() {
-	if ($('#heatFader').hasClass('opaque')) {
-		$('#heatFader').removeClass('opaque');
-	} else {
-		$('#heatFader').addClass('opaque');
-	}
+function heatUp() {
+	$('#heatFader').animate({opacity: '+=0.2'});
+}
+
+function heatDown() {
+	$('#heatFader').animate({opacity: '-=0.2'});
 }
 
 // VOLUME KNOB
