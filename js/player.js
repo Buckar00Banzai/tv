@@ -84,8 +84,7 @@ function onPlayerStateChange(event) {
 	}
 	if (event.data == YT.PlayerState.PLAYING) {
 		tvStatic.pause();
-		$('#curVol').html("<p>Current Volume" + loadYt.getVolume() + "</p>");
-		$('#videoHero').css({'opacity' : '1'});
+		$('#curVol').html("<p>Current Volume " + loadYt.getVolume() + "</p>") && $('#videoHero').css({'opacity' : '1'});
 	}
 }
 
