@@ -444,6 +444,12 @@ li.grn-btn:hover {
   background-size: 44px 68px;
   background-position: 0px -34px;
 }
+#curVol {
+  color: white;
+  position: absolute;
+  top: 320px;
+  left: 80px;
+}
 #dots {
   position: absolute;
   top: -28px;
