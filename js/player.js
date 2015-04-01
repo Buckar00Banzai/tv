@@ -32,7 +32,7 @@ function getScenes(){
 	});
 }
 
-$('#curVol').html(curVol);
+$('#curVol').html('curVol');
 
 /*----controls------*/
 function playBtn(){
