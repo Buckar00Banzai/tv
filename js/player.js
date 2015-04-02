@@ -105,7 +105,7 @@ function onPlayerStateChange(event) {
         var volume = playerBG.getVolume();
         var knobPosition = knobKnob(value);
         
-        playerBG.setVolume(knobPosition);
+        playerBG.setVolume(30);
     }, 100);
 
 	// TIMEBAR
