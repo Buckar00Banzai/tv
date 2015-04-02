@@ -2,7 +2,6 @@ var scenes;
 var currentScenePos = 0;
 var playing = true;
 var playerBG;
-var curVol = playerBG.getVolume();
 
 tvStatic = new Audio('./media/static.ogg'); 
 tvStatic.volume = 0.2;
@@ -90,6 +89,7 @@ function onPlayerStateChange(event) {
 }
 
 function loadYt(sceneId){
+	var curVol = playerBG.getVolume();
 	$('#curVol').html("<p>Volume: " + curVol + "</p>");
 	playerBG.loadVideoById(sceneId);
 }
