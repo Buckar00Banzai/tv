@@ -243,7 +243,5 @@ $(function(){
             colorBars.removeClass('active').slice(0, numBars).addClass('active');
         }
     });
-    setInterval(function() {
-    	$('#curVol').html("<p>Volume: " + numBars + "</p>");
-    }, 100);
+	$('#curVol').html("<p>Volume: " + numBars + "</p>");
 });
