@@ -243,5 +243,5 @@ $(function(){
             colorBars.removeClass('active').slice(0, numBars).addClass('active');
         }
     });
-    $('#curVol').html("<p>Volume: " + numBars + "</p>");
+	$('#curVol').html("<p>Volume: " + numBars + "</p>");
 });
