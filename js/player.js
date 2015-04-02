@@ -101,12 +101,13 @@ function onPlayerStateChange(event) {
 	}
 
 	// VOLUME
-    window.setInterval(function(){
-        var volume = playerBG.getVolume();
-        var knobPosition = knobKnob(value);
+    // window.setInterval(function(){
+    //     var volume = playerBG.getVolume();
+    //     var knobPosition = knobKnob(value);
         
-        playerBG.setVolume(30);
-    }, 100);
+    //     playerBG.setVolume(30);
+    //     $('#curVol').html("<p>Volume: " + volume + "</p>");
+    // }, 100);
 
 	// TIMEBAR
     // window.setInterval(function(){
@@ -121,8 +122,6 @@ function onPlayerStateChange(event) {
 }
 
 function loadYt(sceneId){
-	var curVol = playerBG.getVolume();
-	$('#curVol').html("<p>Volume: " + curVol + "</p>");
 	playerBG.loadVideoById(sceneId);
 }
 
@@ -244,5 +243,5 @@ $(function(){
             colorBars.removeClass('active').slice(0, numBars).addClass('active');
         }
     });
-
+    $('#curVol').html("<p>Volume: " + numBars + "</p>");
 });
