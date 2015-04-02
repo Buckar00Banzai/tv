@@ -84,14 +84,17 @@ function onPlayerStateChange(event) {
 	}
 	if (event.data == YT.PlayerState.PLAYING) {
 		tvStatic.pause();
+		$('#curVol').html("<p>Volume: " + curVol + "</p>");
 		$('#videoHero').css({'opacity' : '1'});
 	}
 }
 
 function loadYt(sceneId){
-	var curVol = playerBG.getVolume();
-	$('#curVol').html("<p>Volume: " + curVol + "</p>");
 	playerBG.loadVideoById(sceneId);
+}
+
+function showVol(curVol) {
+	playerBG.getVolume(curVol);
 }
 
 function skipScene(){
