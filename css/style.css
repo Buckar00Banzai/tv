@@ -473,7 +473,7 @@ li.grn-btn:hover {
   height: 9px;
   border-radius: 50%;
   border: 0.5px solid #8900B2;
-  background: #000000 !important;
+  background: rgba(0, 0, 0, 0.2) !important;
   position: absolute;
   opacity: 0.5;
   box-shadow: inset 0px 0px 1px #000000;
