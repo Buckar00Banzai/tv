@@ -94,10 +94,6 @@ function onPlayerStateChange(event) {
 		} else {
 			$('#mute').addClass('lit') && playerBG.mute();
 		}
-
-		if (playerBG.getVolume() > setVolume) {
-	        playerBG.setVolume(setVolume);
-	    }
 	}
 
 	// VOLUME
