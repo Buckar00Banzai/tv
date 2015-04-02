@@ -79,13 +79,45 @@ function onPlayerReady(event) {
 }
 
 function onPlayerStateChange(event) {
+	var done = false;
+
 	if (event.data == 0){
 		skipScene();
 	}
-	if (event.data == YT.PlayerState.PLAYING) {
+	if (event.data == YT.PlayerState.PLAYING && !done) {
 		tvStatic.pause();
 		$('#videoHero').css({'opacity' : '1'});
+
+		// SOUNDCHECK
+		if (playerBG.isMuted(true)) {
+			$('#mute').removeClass('lit') && playerBG.unMute();
+		} else {
+			$('#mute').addClass('lit') && playerBG.mute();
+		}
+
+		if (playerBG.getVolume() > setVolume) {
+	        playerBG.setVolume(setVolume);
+	    }
 	}
+
+	// VOLUME
+    window.setInterval(function(){
+        var volume = playerBG.getVolume();
+        var knobPosition = knobKnob(value);
+        
+        playerBG.setVolume(knobPosition);
+    }, 100);
+
+	// TIMEBAR
+    // window.setInterval(function(){
+    //     var duration = player.getDuration() - (player.getDuration() - endSeconds) - startSeconds;
+    //     var currentTime = player.getCurrentTime() - startSeconds;
+    //     $j(".current_time").css({
+    //         "width": ( currentTime / duration ) * 100 + "%"
+    //     });
+    // }, 100);
+
+    done = true;
 }
 
 function loadYt(sceneId){
