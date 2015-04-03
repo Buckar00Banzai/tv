@@ -213,7 +213,7 @@ $(function(){
             // changes, instead of on every move
 
             if(numBars == lastNum){
-            	$('#curVol').html("<p>Volume: " + player.getVolume() + "</p>");
+            	$('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
               	playerBG.setVolume(numBars);
                 return false;
             }
