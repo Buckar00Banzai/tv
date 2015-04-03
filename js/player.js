@@ -49,24 +49,45 @@ function playBtn(){
 
 /*----------------- YOUTUBE ------------*/
 function onYouTubeIframeAPIReady() {
-	playerBG = new YT.Player('videoHero', {
-		height: '125%',
-		width: '125%',
-		playerVars: {
-			'autoplay': 1,
-			'controls': 1,
-			'autohide':1,
-			// 'enablejsapi': 1,
-			'wmode':'opaque',
-			'origin': 'http://galoremag.com'
-			// 'loop': 1
-		},
-		videoId: '',
-		events: {
-			'onReady': onPlayerReady,
-			'onStateChange': onPlayerStateChange
-		}
-	});
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+		playerBG = new YT.Player('videoHero', {
+			height: '125%',
+			width: '125%',
+			playerVars: {
+				'autoplay': 1,
+				'controls': 1,
+				'autohide':1,
+				// 'enablejsapi': 1,
+				'wmode':'opaque',
+				'origin': 'http://galoremag.com'
+				// 'loop': 1
+			},
+			videoId: '',
+			events: {
+				'onReady': onPlayerReady,
+				'onStateChange': onPlayerStateChange
+			}
+		});
+	} else {
+		playerMobile = new YT.Player('videoHeroMobile', {
+			height: '125%',
+			width: '125%',
+			playerVars: {
+				'autoplay': 1,
+				'controls': 1,
+				'autohide':1,
+				// 'enablejsapi': 1,
+				'wmode':'opaque',
+				'origin': 'http://galoremag.com'
+				'loop': 1
+			},
+			videoId: '',
+			events: {
+				'onReady': onPlayerMobileReady,
+				'onStateChange': onPlayerMobileStateChange
+			}
+		});
+	}
 }
 
 function onPlayerReady(event) {
@@ -84,27 +105,17 @@ function onPlayerReady(event) {
 	}
 }
 
-function onPlayerStateChange(event) {
-	var done = false;
+function onPlayerMobileReady() {
+    playerMobile.playVideo();
 
-	if (event.data == 0){
-		skipScene();
+    // SOUNDCHECK
+	if (playerBG.isMuted(true)) {
+		playerBG.unMute();
 	}
-	if (event.data == YT.PlayerState.PLAYING && !done) {
-		tvStatic.pause();
-		$('#videoHero').css({'opacity' : '1'});
-	}
+}
 
-	// TIMEBAR
-    // window.setInterval(function(){
-    //     var duration = player.getDuration() - (player.getDuration() - endSeconds) - startSeconds;
-    //     var currentTime = player.getCurrentTime() - startSeconds;
-    //     $j(".current_time").css({
-    //         "width": ( currentTime / duration ) * 100 + "%"
-    //     });
-    // }, 100);
-
-    done = true;
+function onPlayerMobileStateChange(event) {
+	playerMobile.nextVideo();
 }
 
 function loadYt(sceneId){
