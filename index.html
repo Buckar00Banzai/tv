@@ -82,6 +82,12 @@
 				</ul>
 			</div>
 		</div>
+
+		<div class="sideMob">
+			<ul class="mobPlay">
+				<li class="mob-btn" onclick="skipScene()"></li>
+			</ul>
+		</div>
 	</div>
 
 	<div id="heatFader"></div>
@@ -95,6 +101,8 @@
     <script>
     if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       $('.sorry').show();
+      $('.sidebar').css('display', 'none');
+      $('.sideMob').show();
     }
     </script>
 
