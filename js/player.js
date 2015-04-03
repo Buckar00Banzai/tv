@@ -56,7 +56,7 @@ function onYouTubeIframeAPIReady() {
 			'autoplay': 1,
 			'controls': 1,
 			'autohide':1,
-			// 'enablejsapi': 1,
+			'enablejsapi': 1,
 			'wmode':'opaque',
 			'origin': 'http://galoremag.com'
 			// 'loop': 1

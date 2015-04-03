@@ -181,8 +181,8 @@ a:focus {color: @pink; text-decoration: none;}
   margin: 0px auto;
   overflow: hidden;
   background: url('../images/static.gif');
-  background-size: cover!important;
-  background-position: 90px 0px;
+  background-size: cover !important;
+  background-position: 0px 0px;
   height: 100%;
   position: absolute;
   top: 0px;
@@ -674,13 +674,19 @@ li.grn-btn:hover {
   color : #fff;
   position: absolute;
   z-index: 99999;
-  top: 40px;
-  left: 190px;
+  top: 100px;
+  text-align: center;
+  width: 100%;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   padding: 15px;
   display: none;
   text-transform: uppercase;
+}
+
+.sorry h1 span {
+  display: inline-block;
+  font-size: 3em;
 }
 
 .sorry a{
@@ -693,7 +699,7 @@ li.grn-btn:hover {
   opacity: 0.8;
 }
 
-.sideMob {
+.side-mob {
   width: 100%;
   left: 0px;
   height: 100%;
@@ -702,20 +708,58 @@ li.grn-btn:hover {
   top: 0px;
   text-align: center;
   box-shadow: 0px 0px 25px rgba(250,0,50,0.3);
+  display: table;
   .transition;
 }
 
-.sideMob ul li.mob-btn {
+.side-mob .logo {
+  height: 88px;
+  width: 118px;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  background: transparent url("../images/logo.png") scroll no-repeat 0 0;
+  background-size: 118px 88px;
+  text-indent: 110%;
+  overflow: visible;
+  margin: 10px auto 10px -59px;
+  display: inline-block;
+  z-index: 99;
+}
+
+.side-mob .logo span {
+  display: none;
+}
+
+.side-mob ul.mob-player {
+  position: absolute;
+  bottom: 15px;
+  display: table-cell;
+  margin: 0 auto;
+}
+
+.side-mob ul li.mob-btn {
   width: 32px;
   height: 32px;
+  border-radius: 50%;
   background: @pink;
   color: white;
+  padding: 4px 0px 0px 3px;
+  float: left;
+  margin: 0px 5px;
   box-shadow: 1px 1px 3px rgba(240,0,40,1);
+}
+
+.side-mob ul li.mob-btn:hover, .side-mob ul li.mob-btn:active {
+  background: yellow;
 }
 
 @media only screen and (max-width : 400px) {
   .sorry{
     display: block;
+  }
+  .sidebar {
+    display: none;
   }
   .sideMob {
     display: block;

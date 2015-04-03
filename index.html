@@ -83,9 +83,11 @@
 			</div>
 		</div>
 
-		<div class="sideMob">
-			<ul class="mobPlay">
-				<li class="mob-btn" onclick="skipScene()"></li>
+		<div class="side-mob">
+			<div class="logo"></div>
+			<ul class="mob-player">
+				<li class="mob-btn play pause" onclick="playBtn()" value="Pause"><i class="fa fa-play"></i></li>
+				<li class="mob-btn" onclick="skipScene()"><i class="fa fa-fast-forward"></i></li>
 			</ul>
 		</div>
 	</div>
@@ -95,7 +97,7 @@
 	<div id="videoHero"></div>
 
 	<div class="sorry">
-		<h1>Sorry. big computers only.</h1>
+		<h1><span>Sorry.</span> Big computers only.</h1>
 	</div>
 
     <script>
