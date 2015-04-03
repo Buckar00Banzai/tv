@@ -96,7 +96,7 @@ function onPlayerStateChange(event) {
 
 		// VOLUME LABEL
 		setInterval(function() {
-			$('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
+			$('#curVol').html("<p>Volume: " + event.data.getVolume() + "</p>");
 		}, 100);
 
 		// if (playerBG.getVolume() > setVolume) {
