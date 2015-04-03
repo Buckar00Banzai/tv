@@ -214,7 +214,7 @@ $(function(){
 
             if(numBars == lastNum){
             	$('#curVol').html("<p>Volume: " + player.getVolume() + "</p>");
-              	player.setVolume(numBars);
+              	playerBG.setVolume(numBars);
                 return false;
             }
             lastNum = numBars;
