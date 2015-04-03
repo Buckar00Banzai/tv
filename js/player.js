@@ -249,8 +249,7 @@ $(function(){
     });
     function volChange(event) {
     	setInterval(function() {
-	    	// $('#curVol').html("<p>Volume: " + numBars + "</p>");
-	    	event.target.setVolume(numBars);
+	    	event.target.setVolume(30);
 	    }, 100);
     }
 });
