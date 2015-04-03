@@ -93,25 +93,7 @@ function onPlayerStateChange(event) {
 	if (event.data == YT.PlayerState.PLAYING && !done) {
 		tvStatic.pause();
 		$('#videoHero').css({'opacity' : '1'});
-
-		// VOLUME LABEL
-		window.setInterval(function() {
-			$('#curVol').html("<p>Volume: " + event.target.setVolume(numBars) + "</p>");
-		}, 100);
-
-		// if (playerBG.getVolume() > setVolume) {
-	 //        playerBG.setVolume(setVolume);
-	 //    }
 	}
-
-	// VOLUME
-    // window.setInterval(function(){
-    //     var volume = playerBG.getVolume();
-    //     var knobPosition = knobKnob(value);
-        
-    //     playerBG.setVolume(30);
-    //     $('#curVol').html("<p>Volume: " + volume + "</p>");
-    // }, 100);
 
 	// TIMEBAR
     // window.setInterval(function(){
@@ -201,15 +183,6 @@ function heatDown() {
 
 $(function(){
 
-    // var colors = [
-    //     '26e000','2fe300','37e700','45ea00','51ef00',
-    //     '61f800','6bfb00','77ff02','80ff05','8cff09',
-    //     '93ff0b','9eff09','a9ff07','c2ff03','d7ff07',
-    //     'f2ff0a','fff30a','ffdc09','ffce0a','ffc30a',
-    //     'ffb509','ffa808','ff9908','ff8607','ff7005',
-    //     'ff5f04','ff4f03','f83a00','ee2b00'
-    // ];
-
     var rad2deg = 180/Math.PI;
     var deg = 0;
     var bars = $('#dots');
@@ -240,6 +213,8 @@ $(function(){
             // changes, instead of on every move
 
             if(numBars == lastNum){
+            	$('#curVol').html("<p>Volume: " + player.getVolume() + "</p>");
+              	player.setVolume(numBars);
                 return false;
             }
             lastNum = numBars;
@@ -247,12 +222,4 @@ $(function(){
             colorBars.removeClass('active').slice(0, numBars).addClass('active');
         }
     });
-    // $('#control').change([numBars], function() {
-    // 	$('#videoHero').playerBG.event.target.setVolume(30);
-    // })
-    // function volChange(event) {
-    // 	setInterval(function() {
-	   //  	$('#videoHero').playerBG.event.target.setVolume(30);
-	   //  }, 100);
-    // }
 });
