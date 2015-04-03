@@ -91,8 +91,6 @@ function onPlayerStateChange(event) {
 		// SOUNDCHECK
 		if (playerBG.isMuted(true)) {
 			$('#mute').removeClass('lit') && playerBG.unMute();
-		} else {
-			$('#mute').addClass('lit') && playerBG.mute();
 		}
 
 		// if (playerBG.getVolume() > setVolume) {
