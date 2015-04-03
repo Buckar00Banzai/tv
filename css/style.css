@@ -598,7 +598,7 @@ li.grn-btn:hover {
   width: 80%;
   overflow: hidden;
 }
-#ytContainer {
+#videoHero {
   height: 1px;
   width: 1px;
   overflow: hidden;
@@ -770,6 +770,10 @@ li.grn-btn:hover {
   left: -10%;
   top: -10%;
   opacity: 0;
+  display: none;
+}
+#videoMobile {
+  display: block;
 }
 #heatFader {
   width: 100%;

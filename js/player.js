@@ -59,7 +59,7 @@ function onYouTubeIframeAPIReady() {
 				'autohide':1,
 				// 'enablejsapi': 1,
 				'wmode':'opaque',
-				'origin': 'http://galoremag.com'
+				'origin': 'https://galoremag.com'
 				// 'loop': 1
 			},
 			videoId: '',
@@ -69,22 +69,27 @@ function onYouTubeIframeAPIReady() {
 			}
 		});
 	} else {
-		playerMobile = new YT.Player('videoHeroMobile', {
-			height: '125%',
-			width: '125%',
+		playerMobile = new YT.Player('videoMobile', {
+			width: 100 + '%',
+			height: 100 + '%',
 			playerVars: {
 				'autoplay': 1,
-				'controls': 1,
-				'autohide':1,
-				// 'enablejsapi': 1,
-				'wmode':'opaque',
-				'origin': 'http://galoremag.com'
-				'loop': 1
+				'controls': 0,
+				'disablekb': 1,
+				'enablejsapi': 1,
+				'fs': 0,
+				'iv_load_policy': 3,
+				'loop': 1,
+				'end': 57,
+				'modestbranding': 1,
+				'origin': 'https://galoremag.com',
+				'showinfo': 0,
+				'listType': 'playlist',
+				'list': 'PLPp3tIzLUEwZYvOFg9pa-I2K7sQ54egCw'
 			},
-			videoId: '',
 			events: {
-				'onReady': onPlayerMobileReady,
-				'onStateChange': onPlayerMobileStateChange
+			'onReady': onPlayerReady
+			// 'onStateChange': onPlayerStateChange
 			}
 		});
 	}
@@ -106,17 +111,18 @@ function onPlayerReady(event) {
 }
 
 function onPlayerMobileReady() {
-    playerMobile.playVideo();
-
     // SOUNDCHECK
-	if (playerBG.isMuted(true)) {
-		playerBG.unMute();
+	if (playerMobile.isMuted(true)) {
+		playerMobile.unMute();
 	}
+
+	playerMobile.setVolume(100);
+    playerMobile.playVideo();
 }
 
-function onPlayerMobileStateChange(event) {
-	playerMobile.nextVideo();
-}
+// function onPlayerMobileStateChange(event) {
+// 	playerMobile.nextVideo();
+// }
 
 function loadYt(sceneId){
 	playerBG.loadVideoById(sceneId);
