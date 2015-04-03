@@ -243,6 +243,7 @@ $(function(){
         }
     });
     setInterval(function() {
-    	$('#curVol').html("<p>Volume: " + numBars + "</p>");
+    	// $('#curVol').html("<p>Volume: " + numBars + "</p>");
+    	playerBG.setVolume(numBars);
     }, 100);
 });
