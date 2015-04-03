@@ -244,6 +244,11 @@ $(function(){
     });
     setInterval(function() {
     	// $('#curVol').html("<p>Volume: " + numBars + "</p>");
-    	playerBG.setVolume(numBars);
+    	$('#videoHero').playerBG.setVolume(numBars);
     }, 100);
+
+    // VOLUME LABEL
+	setInterval(function() {
+		$('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
+	}, 100);
 });
