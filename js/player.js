@@ -249,7 +249,7 @@ $(function(){
     });
     function volChange(event) {
     	setInterval(function() {
-	    	playerBG.event.target.setVolume(30);
+	    	$('#videoHero').playerBG.event.target.setVolume(30);
 	    }, 100);
     }
 });
