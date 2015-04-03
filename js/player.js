@@ -88,7 +88,7 @@ function onYouTubeIframeAPIReady() {
 				'list': 'PLPp3tIzLUEwZYvOFg9pa-I2K7sQ54egCw'
 			},
 			events: {
-			'onReady': onPlayerReady
+			'onReady': onPlayerMobileReady
 			// 'onStateChange': onPlayerStateChange
 			}
 		});
