@@ -192,6 +192,11 @@ function heatDown() {
 	$('#heatFader').animate({opacity: '-=0.2'});
 }
 
+// VOLUME LABEL
+setInterval(function() {
+	$('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
+}, 100);
+
 // VOLUME KNOB
 
 $(function(){
@@ -246,9 +251,4 @@ $(function(){
     	// $('#curVol').html("<p>Volume: " + numBars + "</p>");
     	$('#videoHero').playerBG.setVolume(numBars);
     }, 100);
-
-    // VOLUME LABEL
-	setInterval(function() {
-		$('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
-	}, 100);
 });
