@@ -247,8 +247,10 @@ $(function(){
             colorBars.removeClass('active').slice(0, numBars).addClass('active');
         }
     });
-    setInterval(function() {
-    	// $('#curVol').html("<p>Volume: " + numBars + "</p>");
-    	event.data.setVolume(numBars);
-    }, 100);
+    function volChange(event) {
+    	setInterval(function() {
+	    	// $('#curVol').html("<p>Volume: " + numBars + "</p>");
+	    	event.target.setVolume(numBars);
+	    }, 100);
+    }
 });
