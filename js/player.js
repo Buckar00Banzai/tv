@@ -75,7 +75,13 @@ function onPlayerReady(event) {
         skipScene();
    	} else {
     	event.target.playVideo();
+
     }
+
+    // SOUNDCHECK
+	if (playerBG.isMuted(true)) {
+		$('#mute').removeClass('lit') && playerBG.unMute();
+	}
 }
 
 function onPlayerStateChange(event) {
@@ -87,11 +93,6 @@ function onPlayerStateChange(event) {
 	if (event.data == YT.PlayerState.PLAYING && !done) {
 		tvStatic.pause();
 		$('#videoHero').css({'opacity' : '1'});
-
-		// SOUNDCHECK
-		if (playerBG.isMuted(true)) {
-			$('#mute').removeClass('lit') && playerBG.unMute();
-		}
 
 		// if (playerBG.getVolume() > setVolume) {
 	 //        playerBG.setVolume(setVolume);
