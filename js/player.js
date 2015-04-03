@@ -94,6 +94,11 @@ function onPlayerStateChange(event) {
 		tvStatic.pause();
 		$('#videoHero').css({'opacity' : '1'});
 
+		// VOLUME LABEL
+		setInterval(function() {
+			$('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
+		}, 100);
+
 		// if (playerBG.getVolume() > setVolume) {
 	 //        playerBG.setVolume(setVolume);
 	 //    }
@@ -191,11 +196,6 @@ function heatUp() {
 function heatDown() {
 	$('#heatFader').animate({opacity: '-=0.2'});
 }
-
-// VOLUME LABEL
-setInterval(function() {
-	$('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
-}, 100);
 
 // VOLUME KNOB
 
