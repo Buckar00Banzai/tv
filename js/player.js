@@ -95,8 +95,8 @@ function onPlayerStateChange(event) {
 		$('#videoHero').css({'opacity' : '1'});
 
 		// VOLUME LABEL
-		setInterval(function() {
-			$('#curVol').html("<p>Volume: " + event.data.getVolume() + "</p>");
+		window.setInterval(function() {
+			$('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
 		}, 100);
 
 		// if (playerBG.getVolume() > setVolume) {
@@ -249,6 +249,6 @@ $(function(){
     });
     setInterval(function() {
     	// $('#curVol').html("<p>Volume: " + numBars + "</p>");
-    	$('#videoHero').playerBG.setVolume(numBars);
+    	event.data.setVolume(numBars);
     }, 100);
 });
