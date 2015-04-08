@@ -1,0 +1,81 @@
+extends layout
+
+block content
+  .wrapper
+    .sidebar
+      .loader
+          .loaderMask
+          .loaderBg
+
+      .remote
+          ul.main-btns
+              li.play.pause.pink-btn(onclick="playBtn()", value="Pause")
+              li#mute.pink-btn(onclick="muteToggle()")
+
+          ul.sub-btns
+              li.grey-btn
+              li.grey-btn(onclick="skipScene()")
+              li.blank
+              li.blank
+              li.grey-btn(onclick="heatDown()")
+              li.grey-btn(onclick="heatUp()")
+              li.grey-btn
+              li.grey-btn
+              li.fullscreen.blue-btn(onclick="fullScreen()")
+              li.grey-btn
+              li.grey-btn
+      
+          #bars
+            #control
+            .dotBack
+              .colorBarBack(style="-webkit-transform: rotate(0deg); top: 100px; left: 20px; background-color: rgb(38, 224, 0);")
+              .colorBarBack(style="-webkit-transform: rotate(12deg); top: 83.3670647345793px; left: 21.7481919412955px; background-color: rgb(47, 227, 0);")
+              .colorBarBack(style="-webkit-transform: rotate(24deg); top: 67.461068553936px; left: 26.9163633885919px; background-color: rgb(55, 231, 0);")
+              .colorBarBack(style="-webkit-transform: rotate(36deg); top: 52.9771798166021px; left: 35.2786404500042px; background-color: rgb(69, 234, 0);")
+              .colorBarBack(style="-webkit-transform: rotate(48deg); top: 40.5484139618085px; left: 46.4695514912913px; background-color: rgb(81, 239, 0);")
+              .colorBarBack(style="-webkit-transform: rotate(60deg); top: 30.7179676972449px; left: 60px; background-color: rgb(97, 248, 0);")
+              .colorBarBack(style="-webkit-transform: rotate(72deg); top: 23.9154786963877px; left: 75.2786404500042px; background-color: rgb(107, 251, 0);")
+              .colorBarBack(style="-webkit-transform: rotate(84deg); top: 20.4382483705381px; left: 91.6377229385877px; background-color: rgb(119, 255, 2);")
+              .colorBarBack(style="-webkit-transform: rotate(96deg); top: 20.4382483705381px; left: 108.362277061412px; background-color: rgb(128, 255, 5);")
+              .colorBarBack(style="-webkit-transform: rotate(108deg); top: 23.9154786963877px; left: 124.721359549996px; background-color: rgb(140, 255, 9);")
+              .colorBarBack(style="-webkit-transform: rotate(120deg); top: 30.7179676972449px; left: 140px; background-color: rgb(147, 255, 11);")
+              .colorBarBack(style="-webkit-transform: rotate(132deg); top: 40.5484139618085px; left: 153.530448508709px; background-color: rgb(158, 255, 9);")
+              .colorBarBack(style="-webkit-transform: rotate(144deg); top: 52.9771798166021px; left: 164.721359549996px; background-color: rgb(169, 255, 7);")
+              .colorBarBack(style="-webkit-transform: rotate(156deg); top: 67.461068553936px; left: 173.083636611408px; background-color: rgb(194, 255, 3);")
+              .colorBarBack(style="-webkit-transform: rotate(168deg); top: 83.3670647345793px; left: 178.251808058704px; background-color: rgb(215, 255, 7);")
+              .colorBarBack(style="-webkit-transform: rotate(180deg); top: 100px; left: 180px; background-color: rgb(242, 255, 10);")
+              .colorBarBack(style="-webkit-transform: rotate(192deg); top: 116.632935265421px; left: 178.251808058704px; background-color: rgb(255, 243, 10);")
+              .colorBarBack(style="-webkit-transform: rotate(204deg); top: 132.538931446064px; left: 173.083636611408px; background-color: rgb(255, 220, 9);")
+              .colorBarBack(style="-webkit-transform: rotate(216deg); top: 147.022820183398px; left: 164.721359549996px; background-color: rgb(255, 206, 10);")
+              .colorBarBack(style="-webkit-transform: rotate(228deg); top: 159.451586038192px; left: 153.530448508709px; background-color: rgb(255, 195, 10);")
+              .colorBarBack(style="-webkit-transform: rotate(240deg); top: 169.282032302755px; left: 140px; background-color: rgb(255, 181, 9);")
+              .colorBarBack(style="-webkit-transform: rotate(252deg); top: 176.084521303612px; left: 124.721359549996px; background-color: rgb(255, 168, 8);")
+              .colorBarBack(style="-webkit-transform: rotate(264deg); top: 179.561751629462px; left: 108.362277061412px; background-color: rgb(255, 153, 8);")
+              .colorBarBack(style="-webkit-transform: rotate(276deg); top: 179.561751629462px; left: 91.6377229385877px; background-color: rgb(255, 134, 7);")
+              .colorBarBack(style="-webkit-transform: rotate(288deg); top: 176.084521303612px; left: 75.2786404500042px; background-color: rgb(255, 112, 5);")
+              .colorBarBack(style="-webkit-transform: rotate(300deg); top: 169.282032302755px; left: 60px; background-color: rgb(255, 95, 4);")
+              .colorBarBack(style="-webkit-transform: rotate(312deg); top: 159.451586038192px; left: 46.4695514912913px; background-color: rgb(255, 79, 3);")
+              .colorBarBack(style="-webkit-transform: rotate(324deg); top: 147.022820183398px; left: 35.2786404500042px; background-color: rgb(248, 58, 0);")
+              .colorBarBack(style="-webkit-transform: rotate(336deg); top: 132.538931446064px; left: 26.9163633885919px; background-color: rgb(238, 43, 0);")
+            #dots
+
+          .credits
+              ul.social-btns
+                  li.blue-btn(onclick="window.open('https://facebook.com/sharer/sharer.php?u=http://galoremag.com/tv/','Share this post on Facebook','width=600,height=400')")
+                  li.blue-btn(onclick="window.open('https://twitter.com/share?url=https%3A%2F%2Fgaloremag.com%2Ftv', 'Tweet a link to GaloreTV', 'width=600,height=400')")
+
+  #heatFader
+
+  #videoHero
+
+  .sorry
+      h1 Sorry, big computers only.
+
+block footer
+  script(src='/javascripts/jquery.js')
+  script(src='/javascripts/modernizr.custom.25477.js')
+  script(src='/javascripts/bootstrap.min.js')
+  script(src='/javascripts/transform.js')
+  script(src='/javascripts/animate.js')
+  script(src='/javascripts/knobKnob.jquery.js')
+  script(src='/javascripts/player.js')
