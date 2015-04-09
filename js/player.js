@@ -70,10 +70,10 @@ function onYouTubeIframeAPIReady() {
 }
 
 function onPlayerReady(event) {
-	loadYt(scenes[0].url)
 	if (playerBG.getDuration() < 1){
         skipScene();
    	} else {
+   		loadYt(scenes[0].url);
     	event.target.playVideo();
 
     }
