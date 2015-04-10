@@ -100,6 +100,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e59944', end
   .transition;
 }
 
+.flipped {
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
@@ -385,6 +392,13 @@ li.grey-btn {
 li.grey-btn:hover {
   display: block;
   background: url('../images/btn-grey.png') no-repeat;
+  background-size: 51px 68px;
+  background-position: 0px -34px;
+}
+
+li#wtfToggle.pressed {
+  display: block;
+  background: url('../images/btn-blue.png') no-repeat;
   background-size: 51px 68px;
   background-position: 0px -34px;
 }
