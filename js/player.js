@@ -198,6 +198,8 @@ $(function(){
     var colorBars = bars.find('.colorBar');
     var numBars = 0, lastNum = -1;
 
+    playerBG.setVolume(numBars);
+
     $('#control').knobKnob({
         snap : 10,
         value: 40,
