@@ -101,7 +101,8 @@
     background-size: 51px 68px;
     background-position: 0px 0px;
   }
-  li.grey-btn:hover {
+  li.grey-btn:hover,
+  li#wtfToggle.pressed {
     background: url('../images/btn-grey_@2X.png') no-repeat;
     background-size: 51px 68px;
     background-position: 0px -34px;
@@ -111,8 +112,7 @@
     background-size: 51px 68px;
     background-position: 0px 0px;
   }
-  li.blue-btn:hover,
-  li#wtfToggle.pressed {
+  li.blue-btn:hover {
     background: url('../images/btn-blue_@2X.png') no-repeat;
     background-size: 51px 68px;
     background-position: 0px -34px;
