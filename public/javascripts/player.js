@@ -24,7 +24,7 @@ $(document).ready(function(){
 })
 
 function getScenes(){
-	$.get('http://165.225.129.212:8080/vids', function(data){
+	$.get('http://165.225.129.212:8080/vids/', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
@@ -58,7 +58,7 @@ function onYouTubeIframeAPIReady() {
 			'autohide':1,
 			// 'enablejsapi': 1,
 			'wmode':'opaque',
-			'origin': 'http://tv.galoremag.com'
+			'origin': 'http://galoremag.com'
 			// 'loop': 1
 		},
 		videoId: '',
@@ -120,9 +120,9 @@ function muteToggle() {
 
 function wtfToggle() {
 	if ($('#videoHero').hasClass('flipped')) {
-		$('#wtfToggle').removeClass('pressed') && $(this).removeClass('flipped');
+		$('#wtfToggle').removeClass('pressed') && $('#videoHero').removeClass('flipped');
 	} else {
-		$('#wtfToggle').addClass('pressed') && $(this).removeClass('flipped');
+		$('#wtfToggle').addClass('pressed') && $('#videoHero').removeClass('flipped');
 	}
 }
 
@@ -197,8 +197,6 @@ $(function(){
 
     var colorBars = bars.find('.colorBar');
     var numBars = 0, lastNum = -1;
-
-    // playerBG.setVolume(numBars);
 
     $('#control').knobKnob({
         snap : 10,
