@@ -24,7 +24,7 @@ $(document).ready(function(){
 })
 
 function getScenes(){
-	$.get('//api-1.galoremag.com', function(data){
+	$.get('http://165.225.129.212:8080/vids', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
@@ -120,9 +120,9 @@ function muteToggle() {
 
 function wtfToggle() {
 	if ($('#videoHero').hasClass('flipped')) {
-		$('#wtfToggle').removeClass('pressed') && $('#videoHero').removeClass('flipped');
+		$('#wtfToggle').removeClass('pressed') && $(this).removeClass('flipped');
 	} else {
-		$('#wtfToggle').addClass('pressed') && $('#videoHero').removeClass('flipped');
+		$('#wtfToggle').addClass('pressed') && $(this).removeClass('flipped');
 	}
 }
 
