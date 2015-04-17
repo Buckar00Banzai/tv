@@ -24,7 +24,7 @@ $(document).ready(function(){
 })
 
 function getScenes(){
-	$.get('http://165.225.129.212:8080/vids/', function(data){
+	$.get('http://165.225.129.212:8080/vids', function(data){
 		scenes = data;
 	}).done(function(){
 		shuffle(scenes);
@@ -58,7 +58,7 @@ function onYouTubeIframeAPIReady() {
 			'autohide':1,
 			// 'enablejsapi': 1,
 			'wmode':'opaque',
-			'origin': 'http://galoremag.com'
+			'origin': 'http://tv.galoremag.com'
 			// 'loop': 1
 		},
 		videoId: '',
@@ -85,26 +85,13 @@ function onPlayerReady(event) {
 }
 
 function onPlayerStateChange(event) {
-	var done = false;
-
 	if (event.data == 0){
 		skipScene();
 	}
-	if (event.data == YT.PlayerState.PLAYING && !done) {
+	if (event.data == YT.PlayerState.PLAYING) {
 		tvStatic.pause();
 		$('#videoHero').css({'opacity' : '1'});
 	}
-
-	// TIMEBAR
-    // window.setInterval(function(){
-    //     var duration = player.getDuration() - (player.getDuration() - endSeconds) - startSeconds;
-    //     var currentTime = player.getCurrentTime() - startSeconds;
-    //     $j(".current_time").css({
-    //         "width": ( currentTime / duration ) * 100 + "%"
-    //     });
-    // }, 100);
-
-    done = true;
 }
 
 function loadYt(sceneId){
@@ -128,6 +115,14 @@ function muteToggle() {
 		$('#mute').removeClass('lit') && playerBG.unMute();
 	} else {
 		$('#mute').addClass('lit') && playerBG.mute();
+	}
+}
+
+function wtfToggle() {
+	if ($('#videoHero').hasClass('flipped')) {
+		$('#wtfToggle').removeClass('pressed') && $(this).removeClass('flipped');
+	} else {
+		$('#wtfToggle').addClass('pressed') && $(this).removeClass('flipped');
 	}
 }
 
@@ -202,6 +197,8 @@ $(function(){
 
     var colorBars = bars.find('.colorBar');
     var numBars = 0, lastNum = -1;
+
+    // playerBG.setVolume(numBars);
 
     $('#control').knobKnob({
         snap : 10,
