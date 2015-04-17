@@ -19,6 +19,10 @@ else
 }
 tvStatic.play();
 
+$(document).ready(function(){
+	getScenes();
+})
+
 function getScenes(){
 	$.get('http://165.225.129.212:8080/vids/', function(data){
 		scenes = data;
