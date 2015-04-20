@@ -3,7 +3,17 @@ var currentScenePos = 0;
 var playing = true;
 var playerBG;
 
-tvStatic = new Audio('./media/static.ogg'); 
+// Loads YT script asynchronously
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+
+// Adds static sound
+tvStatic = new Audio('./media/static.ogg');
 tvStatic.volume = 0.2;
 
 if (typeof tvStatic.loop == 'boolean')
@@ -19,6 +29,8 @@ else
 }
 tvStatic.play();
 
+// initializes videos
+
 $(document).ready(function(){
 	getScenes();
 })
@@ -31,7 +43,8 @@ function getScenes(){
 	});
 }
 
-/*----controls------*/
+// controls
+
 function playBtn(){
 	if (playing == false) {
 		playerBG.playVideo();
@@ -44,10 +57,7 @@ function playBtn(){
 	}
 }
 
-/*----------------*/
-
-
-/*----------------- YOUTUBE ------------*/
+// YouTube player load
 function onYouTubeIframeAPIReady() {
 	playerBG = new YT.Player('videoHero', {
 		height: '125%',
@@ -110,6 +120,8 @@ function skipScene(){
 	}
 }
 
+// Mute button
+
 function muteToggle() {
 	if (playerBG.isMuted(true)) {
 		$('#mute').removeClass('lit') && playerBG.unMute();
@@ -118,11 +130,13 @@ function muteToggle() {
 	}
 }
 
+// Flip video button
+
 function wtfToggle() {
 	if ($('#videoHero').hasClass('flipped')) {
-		$('#wtfToggle').removeClass('pressed') && $(this).removeClass('flipped');
+		$('#wtfToggle').removeClass('pressed') && $('#videoHero').removeClass('flipped');
 	} else {
-		$('#wtfToggle').addClass('pressed') && $(this).removeClass('flipped');
+		$('#wtfToggle').addClass('pressed') && $('#videoHero').addClass('flipped');
 	}
 }
 
