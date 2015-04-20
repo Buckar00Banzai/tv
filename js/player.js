@@ -259,6 +259,8 @@ $(function(){
             // Update the dom only when the number of active bars
             // changes, instead of on every move
 
+            playerBG.setVolume(numBars);
+
             if(numBars == lastNum){
             	// $('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
               	playerBG.setVolume(Math.round(numBars/30*100));
