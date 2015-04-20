@@ -152,6 +152,18 @@ function shuffle(array) {
   return array;
 }
 
+// SIGNUP MODAL
+
+function openModal() {
+    $('.submitModal').show();
+};
+
+function closeModal() {
+    $('.submitModal').hide();
+    $('#url').val('');
+    $('#twitter').val('');
+}
+
 function fullScreen(){
     if(document.documentElement.requestFullscreen) {
       document.documentElement.requestFullscreen();
