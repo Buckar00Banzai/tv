@@ -133,10 +133,18 @@ function muteToggle() {
 // Flip video button
 
 function wtfToggle() {
-	if ($('#videoHero').hasClass('flipped')) {
-		$('#wtfToggle').removeClass('pressed') && $('#videoHero').removeClass('flipped');
+	if ($('#videoHero').hasClass('wtf')) {
+		$('#wtfToggle').removeClass('pressed') && $('#videoHero').removeClass('wtf');
 	} else {
-		$('#wtfToggle').addClass('pressed') && $('#videoHero').addClass('flipped');
+		$('#wtfToggle').addClass('pressed') && $('#videoHero').addClass('wtf');
+	}
+}
+
+function lolToggle() {
+	if ($('#videoHero').hasClass('lol')) {
+		$('#lolToggle').removeClass('pressed') && $('#videoHero').removeClass('lol');
+	} else {
+		$('#lolToggle').addClass('pressed') && $('#videoHero').addClass('lol');
 	}
 }
 
