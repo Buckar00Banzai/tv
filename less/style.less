@@ -5,6 +5,19 @@
     A set of useful LESS mixins
     More info at: http://lesselements.com
   ---------------------------------------------------*/
+
+@font-face {
+    font-family: 'fontawesomeregular';
+    src: url('../fonts/fontawesome-webfont.eot');
+    src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/fontawesome-webfont.woff2') format('woff2'),
+         url('../fonts/fontawesome-webfont.woff') format('woff'),
+         url('../fonts/fontawesome-webfont.ttf') format('truetype'),
+         url('../fonts/fontawesome-webfont.svg#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*-- VARIABLES & MIXINS --*/
 
 @orange : #ff631e;
@@ -769,6 +782,28 @@ li.grn-btn:hover {
   -webkit-filter: hue-rotate(90deg) !important;
   -o-filter: hue-rotate(90deg) !important;
   -moz-filter: hue-rotate(90deg) !important;
+}
+
+#like {
+  font-family: 'fontawesomeregular' !important;
+  font-size: 72px;
+  color: white;
+  text-shadow: 0px 0px 15px hotpink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
+}
+
+#dislike {
+  font-family: 'fontawesomeregular' !important;
+  font-size: 72px;
+  color: white;
+  text-shadow: 0px 0px 15px hotpink;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: none;
 }
 
 @media only screen and (max-width : 400px) {

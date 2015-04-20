@@ -208,6 +208,22 @@ function heatDown() {
 	$('#heatFader').animate({opacity: '-=0.2'});
 }
 
+function like() {
+	if ($('#like').css({'display':'none'})) {
+		$('#like').show() && $('#like').fadeOut(1500);
+	} else {
+		null;
+	}
+}
+
+function dislike() {
+	if ($('#dislike').css({'display':'none'})) {
+		$('#dislike').show() && $('#dislike').fadeOut(1500);
+	} else {
+		null;
+	}
+}
+
 // VOLUME KNOB
 
 $(function(){

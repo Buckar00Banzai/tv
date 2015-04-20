@@ -61,8 +61,8 @@
 					<li id="wtfToggle" class="grey-btn" onclick="wtfToggle()"></li>
 					<li id="lolToggle" class="grey-btn" onclick="lolToggle()"></li>
 					<li class="fullscreen blue-btn" onclick="fullScreen()"></li>
-					<li class="grey-btn"></li>
-					<li class="grey-btn"></li>
+					<li id="dislikeButton" class="grey-btn" onclick="dislike()"></li>
+					<li id="likeButton" class="grey-btn" onclick="like()"></li>
 				</ul>
 				<ul class="social-btns">
 					<li class="blue-btn" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=http://galoremag.com/tv/','Share this post on Facebook','width=600,height=400')"></li>
@@ -103,6 +103,9 @@
 
 	<div id="videoHero"></div>
 
+	<div id="like"><i class="fa fa-heart"></i></div>
+	<div id="dislike"><i class="fa fa-ban"></i></div>
+
 	<div class="sorry">
 		<h1><span>Sorry.</span> Big computers only.</h1>
 	</div>
@@ -116,7 +119,8 @@
     </script>
 
 	<!-- SCRIPTS -->
-	<script src="./js/jquery.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 	<script src="./js/knobKnob.jquery.js"></script>
 	<script src="./js/transform.js"></script>
 	<script src="./js/modernizr.custom.25477.js"></script>
