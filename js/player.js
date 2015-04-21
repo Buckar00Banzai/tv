@@ -201,11 +201,11 @@ function fullScreen(){
 // HEAT BTNS
 
 function heatUp() {
-	$('#heatFader').animate({opacity: '+=0.2'});
+	$('#heatFader').stop(true).animate({opacity: '+=0.2'});
 }
 
 function heatDown() {
-	$('#heatFader').animate({opacity: '-=0.2'});
+	$('#heatFader').stop(true).animate({opacity: '-=0.2'});
 }
 
 function like() {
