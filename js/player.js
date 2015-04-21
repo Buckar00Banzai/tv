@@ -248,7 +248,7 @@ $(function(){
     var colorBars = bars.find('.colorBar');
     var numBars = 0, lastNum = -1;
 
-    // playerBG.setVolume(numBars);
+    playerBG.setVolume(numBars);
 
     $('#control').knobKnob({
         snap : 10,
@@ -258,8 +258,6 @@ $(function(){
 
             // Update the dom only when the number of active bars
             // changes, instead of on every move
-
-            playerBG.setVolume(numBars);
 
             if(numBars == lastNum){
             	// $('#curVol').html("<p>Volume: " + playerBG.getVolume() + "</p>");
