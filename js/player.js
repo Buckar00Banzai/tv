@@ -3,7 +3,7 @@ var currentScenePos = 0;
 var playing = true;
 var playerBG;
 
-// Loads YT script asynchronously
+// Loads YouTube script asynchronously
 var tag = document.createElement('script');
 
 tag.src = "https://www.youtube.com/iframe_api";
