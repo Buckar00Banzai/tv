@@ -68,7 +68,7 @@ function onYouTubeIframeAPIReady() {
 			'autohide':1,
 			// 'enablejsapi': 1,
 			'wmode':'opaque',
-			'origin': 'http://tv.galoremag.com'
+			'origin': 'http://galoremag.com'
 			// 'loop': 1
 		},
 		videoId: '',
